@@ -93,36 +93,147 @@ def parse_schedule_html(html: str, quarter: str, year: int) -> List[Course]:
     Returns:
         List[Course]: List of parsed Course objects with all sections
     """
-    # TODO: Implement this function
-    # 1. Extract course blocks from HTML using _extract_course_blocks()
-    # 2. For each course block:
-    #    - Parse course header using _parse_course_header()
-    #    - Parse sections using _parse_course_sections()
-    #    - Create Course object with parsed data
-    # 3. Return list of all Course objects
-    pass
+    print("=" * 80)
+    print("PARSING SCHEDULE HTML")
+    print("=" * 80)
+    print(f"📅 Quarter: {quarter} {year}")
+    print(f"📄 HTML length: {len(html)} characters")
+    
+    # Step 1: Extract course blocks from HTML
+    print("\n🔍 Step 1: Extracting course blocks...")
+    course_blocks = _extract_course_blocks(html)
+    print(f"✅ Found {len(course_blocks)} course blocks")
+    
+    courses = []
+    
+    # Step 2: Process each course block
+    print(f"\n🔍 Step 2: Processing {len(course_blocks)} course blocks...")
+    
+    for i, course_block in enumerate(course_blocks):
+        print(f"\n--- Processing Course Block {i+1}/{len(course_blocks)} ---")
+        
+        # Parse course header
+        print("📋 Parsing course header...")
+        header_data = _parse_course_header(course_block)
+        
+        if not header_data or not header_data.get('code'):
+            print(f"❌ Skipping block {i+1} - no valid header data")
+            continue
+        
+        course_code = header_data['code']
+        print(f"✅ Header parsed: {course_code}")
+        
+        # Parse course sections
+        print("📋 Parsing course sections...")
+        sections = _parse_course_sections(course_block, course_code, quarter, year)
+        print(f"✅ Found {len(sections)} sections")
+        
+        # Create Course object
+        print("📋 Creating Course object...")
+        course = Course(
+            course_code=header_data['code'],
+            title=header_data['title'],
+            prerequisites=header_data['prerequisites'],
+            credits=header_data['credits'],
+            quarter=quarter,
+            year=year,
+            sections=sections
+        )
+        
+        courses.append(course)
+        print(f"✅ Course created: {course_code} with {len(sections)} sections")
+    
+    print(f"\n🎯 PARSING COMPLETE")
+    print(f"   Total courses parsed: {len(courses)}")
+    print(f"   Total sections: {sum(len(course.sections) for course in courses)}")
+    print("=" * 80)
+    
+    return courses
 
 
 def _extract_course_blocks(html: str) -> List[str]:
     """
     Extract individual course blocks from HTML.
     
+    New approach:
+    1. Extract everything between </P> and <P> tags
+    2. Remove the first table (header area) and the first <br> after it
+    3. Every remaining table is either a course header or contains section information
+    
     Args:
         html: Raw HTML content
         
     Returns:
-        List[str]: List of HTML blocks, each containing one course and its sections
+        List[str]: List of HTML blocks, each containing one complete course and its sections
     """
-    # TODO: Implement this function
-    # 1. Use regex to find course header tables (bgcolor='#99ccff')
-    # 2. For each header, capture the header + all following section tables
-    # 3. Return list of complete course blocks
+    print("Extracting course blocks...")
     
-    # Regex pattern hint:
-    # Course header: <table bgcolor='#99ccff'.*?</table>
-    # Followed by: (?:<table[^>]*>.*?</table>)*
-    # Use re.DOTALL flag for multiline matching
-    pass
+    # Determine the background color based on quarter
+    quarter_colors = {
+        'WIN': '#99ccff',  # Winter - light blue
+        'SPR': '#ccffcc',  # Spring - light green  
+        'SUM': '#ffffcc',  # Summer - light yellow
+        'AUT': '#ffcccc',  # Autumn - light pink
+    }
+    
+    # Try to detect quarter from HTML content
+    bgcolor = '#99ccff'  # Default to winter
+    for quarter, color in quarter_colors.items():
+        if f'bgcolor="{color}"' in html or f"bgcolor='{color}'" in html:
+            bgcolor = color
+            print(f"Detected {quarter} quarter (color: {color})")
+            break
+    
+    # Step 1: Extract everything between </P> and <P> tags (or <p> and <P>)
+    # Try to find </P> first, then fall back to <p>
+    p_close_match = re.search(r'</P>', html)
+    if not p_close_match:
+        p_close_match = re.search(r'<p>', html)
+    
+    p_open_match = re.search(r'<P>', html)
+    if not p_open_match:
+        p_open_match = re.search(r'<p>', html)
+    
+    if not p_close_match or not p_open_match:
+        print("Warning: Could not find </P> (or <p>) and <P> boundaries")
+        return []
+    
+    # Extract content between the closing tag and <P> (including both tags)
+    start_pos = p_close_match.start()  # Start at </P> or <p>
+    end_pos = p_open_match.start()     # End before <P>
+    course_schedule_html = html[start_pos:end_pos]
+    
+    print(f"Extracted content between </P> and <P>: {len(course_schedule_html)} characters")
+    
+    # Step 2: Remove the first table (header area) and the first <br> after it
+    # Find the first table in the extracted content
+    first_table_match = re.search(r'<table[^>]*>.*?</table>', course_schedule_html, re.DOTALL)
+    if not first_table_match:
+        print("Warning: Could not find first table to remove")
+        return []
+    
+    # Find the first <br> after the first table
+    after_first_table = course_schedule_html[first_table_match.end():]
+    first_br_match = re.search(r'<br>', after_first_table)
+    
+    if not first_br_match:
+        print("Warning: Could not find <br> after first table")
+        return []
+    
+    # Remove the first table and the first <br> after it
+    # Keep everything after the first <br> following the first table
+    br_end_pos = first_table_match.end() + first_br_match.end()
+    cleaned_html = course_schedule_html[br_end_pos:]
+    
+    print(f"After removing first table and <br>: {len(cleaned_html)} characters")
+    
+    # Step 3: Extract course blocks from the cleaned content
+    # Pattern: course header table + everything until next course header
+    pattern = f'(<table bgcolor=[\'"]{re.escape(bgcolor)}[\'"].*?</table>.*?)(?=<table bgcolor=[\'"]{re.escape(bgcolor)}[\'"]|$)'
+    course_blocks = re.findall(pattern, cleaned_html, re.DOTALL)
+    
+    print(f"Found {len(course_blocks)} course blocks")
+    return course_blocks
 
 
 def _parse_course_header(course_block: str) -> Dict[str, str]:
@@ -135,21 +246,81 @@ def _parse_course_header(course_block: str) -> Dict[str, str]:
     Returns:
         Dict[str, str]: Dictionary with keys: 'code', 'title', 'prerequisites', 'credits'
     """
-    # TODO: Implement this function
-    # 1. Find course header table (bgcolor='#99ccff')
-    # 2. Extract course code from <A NAME=...> tags
-    # 3. Extract title from course title link
-    # 4. Extract prerequisites from header text
-    # 5. Extract credits from header text
-    # 6. Return structured dictionary
+    print("=" * 60)
+    print("PARSING COURSE HEADER")
+    print("=" * 60)
+
+    # Find the course header table (with background color)
+    header_pattern = r'<table[^>]*bgcolor=[\'"][^\'\"]*[\'"][^>]*>.*?</table>'
+    header_match = re.search(header_pattern, course_block, re.DOTALL)
     
-    # HTML structure to parse:
-    # <table bgcolor='#99ccff'>
-    #     <tr><td><b><A NAME=cse122>CSE&nbsp;&nbsp; 122 </A>&nbsp;<A HREF=...>COMP PROGRAMMING II </A></b></td>
-    #         <td><b>(NSc,RSN)</b></td>
-    #         <td><b>Prerequisites</b></td></tr>
-    # </table>
-    pass
+    if not header_match:
+        print("❌ No course header table found")
+        return {}
+    
+    header_html = header_match.group(0)
+    print(f"📋 Found course header table:")
+    print(f"   Length: {len(header_html)} characters")
+    print(f"   Preview: {header_html[:200]}...")
+    
+    # Extract course code from <A NAME=...> tags
+    code_pattern = r'<A NAME=([^>]*)>([^<]+)</A>'
+    code_match = re.search(code_pattern, header_html)
+    
+    if code_match:
+        course_code = code_match.group(2).strip()
+        # Clean up HTML entities
+        course_code = course_code.replace('&nbsp;', ' ').replace('  ', ' ').strip()
+        print(f"📚 Course Code: '{course_code}'")
+    else:
+        print("❌ No course code found")
+        course_code = ""
+    
+    # Extract title from course title link
+    title_pattern = r'<A HREF=[^>]*>([^<]+)</A>'
+    title_match = re.search(title_pattern, header_html)
+    
+    if title_match:
+        title = title_match.group(1).strip()
+        print(f"📖 Title: '{title}'")
+    else:
+        print("❌ No title found")
+        title = ""
+    
+    # Extract prerequisites from header text
+    prereq_pattern = r'Prerequisites[:\s]*([^<\n]+)'
+    prereq_match = re.search(prereq_pattern, header_html, re.IGNORECASE)
+    
+    if prereq_match:
+        prerequisites = prereq_match.group(1).strip()
+        print(f"📋 Prerequisites: '{prerequisites}'")
+    else:
+        print("ℹ️  No prerequisites found")
+        prerequisites = ""
+    
+    # Extract credits from header text
+    credits_pattern = r'(\d+)\s*credits?'
+    credits_match = re.search(credits_pattern, header_html, re.IGNORECASE)
+    
+    if credits_match:
+        credits = credits_match.group(1)
+        print(f"🎓 Credits: '{credits}'")
+    else:
+        print("ℹ️  No credits found")
+        credits = ""
+    
+    result = {
+        'code': course_code,
+        'title': title,
+        'prerequisites': prerequisites,
+        'credits': credits
+    }
+    
+    print(f"✅ Header parsing complete:")
+    print(f"   Result: {result}")
+    print("=" * 60)
+    
+    return result
 
 
 def _parse_course_sections(course_block: str, course_code: str, quarter: str, year: int) -> List[CourseSection]:
@@ -164,27 +335,101 @@ def _parse_course_sections(course_block: str, course_code: str, quarter: str, ye
         
     Returns:
         List[CourseSection]: List of parsed section objects
+
+
+        
     """
-    # TODO: Implement this function
-    # 1. Find all section tables in the course block
-    # 2. For each section, extract:
-    #    - SLN from href link
-    #    - Section ID (A, AA, QZ, etc.)
-    #    - Section type (4, QZ, etc.)
-    #    - Days (TTh, WF, etc.)
-    #    - Time (1130-1220, etc.)
-    #    - Building and room
-    #    - Instructor name
-    #    - Status (Open/Closed)
-    #    - Enrollment numbers
-    # 3. Create CourseSection objects
-    # 4. Handle edge cases (missing data, special characters, etc.)
+    print("=" * 60)
+    print("PARSING COURSE SECTIONS")
+    print("=" * 60)
+    print(f"📚 Course: {course_code}")
+    print(f"📅 Quarter: {quarter} {year}")
     
-    # HTML structure to parse:
-    # <table><tr><td><pre>
-    #     <A HREF=...>12917</A> A  4  WF  1130-1220  <A HREF=...>KNE</A>  130  Natsuhara,Miya Kaye  Open  357/376
-    # </pre></td></tr></table>
-    pass
+    # Find all section tables (tables without background color)
+    section_pattern = r'<table[^>]*(?!bgcolor)[^>]*>.*?</table>'
+    section_tables = re.findall(section_pattern, course_block, re.DOTALL)
+    
+    print(f"🔍 Found {len(section_tables)} section tables")
+    
+    sections = []
+    
+    for i, section_html in enumerate(section_tables):
+        print(f"\n--- Section {i+1} ---")
+        print(f"📋 Section HTML length: {len(section_html)} characters")
+        print(f"📋 Section preview: {section_html[:150]}...")
+        
+        # Extract section data from <pre> tags (they don't have closing </pre> tags)
+        pre_pattern = r'<pre[^>]*>(.*?)(?=</td></tr></table>)'
+        pre_match = re.search(pre_pattern, section_html, re.DOTALL)
+        
+        if not pre_match:
+            print("❌ No <pre> tag found in section")
+            continue
+        
+        section_text = pre_match.group(1).strip()
+        print(f"📝 Section text: '{section_text}'")
+        
+        # Parse section data using regex
+        # Pattern: <A HREF=...>SLN</A> SectionID SectionType Days Time Building Room Instructor Status Enrolled/Capacity
+        # The format is: SLN SectionID SectionType Days Time * * Instructor Status Enrolled/Capacity
+        section_pattern = r'<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+([^\s]+)\s+\*\s+\*\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\d+)'
+        section_match = re.search(section_pattern, section_text)
+        
+        if section_match:
+            sln = section_match.group(1)
+            section_id = section_match.group(2)
+            section_type = section_match.group(3)
+            days = section_match.group(4)
+            time = section_match.group(5)
+            # Building and room are marked as * * in this format
+            building = "*"
+            room = "*"
+            instructor = section_match.group(6).strip()
+            status = section_match.group(7)
+            enrolled = int(section_match.group(8))
+            capacity = int(section_match.group(9))
+            
+            print(f"✅ Parsed section data:")
+            print(f"   SLN: {sln}")
+            print(f"   Section ID: {section_id}")
+            print(f"   Section Type: {section_type}")
+            print(f"   Days: {days}")
+            print(f"   Time: {time}")
+            print(f"   Building: {building}")
+            print(f"   Room: {room}")
+            print(f"   Instructor: {instructor}")
+            print(f"   Status: {status}")
+            print(f"   Enrollment: {enrolled}/{capacity}")
+            
+            # Create CourseSection object (placeholder for now)
+            section = CourseSection(
+                sln=sln,
+                course_code=course_code,
+                section_id=section_id,
+                section_type=section_type,
+                days=days,
+                time=time,
+                building=building,
+                room=room,
+                instructor=instructor,
+                status=status,
+                enrolled=enrolled,
+                capacity=capacity,
+                quarter=quarter,
+                year=year,
+                notes=None
+            )
+            sections.append(section)
+            
+        else:
+            print("❌ Could not parse section data")
+            print(f"   Raw text: '{section_text}'")
+    
+    print(f"\n✅ Section parsing complete:")
+    print(f"   Found {len(sections)} valid sections")
+    print("=" * 60)
+    
+    return sections
 
 
 def _clean_instructor_name(instructor: str) -> str:
@@ -244,7 +489,6 @@ def _parse_enrollment_numbers(enrollment_str: str) -> tuple[int, int]:
 # =============================================================================
 # ASSIGNMENT HINTS - Functions you should and should NOT use
 # =============================================================================
-
 """
 FUNCTIONS YOU SHOULD USE:
 
@@ -309,10 +553,10 @@ USEFUL REGEX PATTERNS:
    r'<table bgcolor=\'#99ccff\'.*?</table>(?:<table[^>]*>.*?</table>)*'
 
 2. Section data:
-   r'<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(\d+-\d+)\s+<A[^>]*>(\w+)</A>\s+(\d+)\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\d+)'
+   r'<A HREF=[^>]*>(+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(+-+)\s+<A[^>]*>(\w+)</A>\s+(+)\s+([^<]+?)\s+(Open|Closed)\s+(+)/(+)'
 
 3. Course code and title:
-   r'<A NAME=(\w+)>(\w+)\s+(\d+)\s*</A>.*?<A[^>]*>([^<]+)</A>'
+   r'<A NAME=(\w+)>(\w+)\s+(+)\s*</A>.*?<A[^>]*>([^<]+)</A>'
 
 4. HTML entities:
    r'&nbsp;' -> ' '
