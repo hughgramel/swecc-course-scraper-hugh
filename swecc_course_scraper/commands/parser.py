@@ -2,12 +2,12 @@
 HTML parser for UW time schedule pages.
 
 This module contains functions to parse raw HTML from UW's time schedule
-pages into structured Course and CourseSection objects.
+pages into structured Course and CourseMeeting objects.
 """
 
 import re
 from typing import List, Dict, Optional
-from ..models.course import Course, CourseSection
+from ..models.course import Course, CourseMeeting
 
 
 # =============================================================================
@@ -25,12 +25,12 @@ Example of what parse_schedule_html() should return:
         credits="5",
         quarter="WIN",
         year=2023,
-        sections=[
-            CourseSection(
+        meetings=[
+            CourseMeeting(
                 sln="12924",
                 course_code="CSE 122",
-                section_id="A",
-                section_type="4",
+                meeting_id="A",
+                meeting_type="4",
                 days="WF",
                 time="1130-1220",
                 building="KNE",
@@ -43,11 +43,11 @@ Example of what parse_schedule_html() should return:
                 year=2023,
                 notes="NO CREDIT FOR STUDENTS WHO HAVE COMPLETED CSE 143"
             ),
-            CourseSection(
+            CourseMeeting(
                 sln="12925",
                 course_code="CSE 122",
-                section_id="AA",
-                section_type="QZ",
+                meeting_id="AA",
+                meeting_type="QZ",
                 days="TTh",
                 time="830-920",
                 building="MGH",
@@ -69,8 +69,8 @@ Example of what parse_schedule_html() should return:
         credits="5",
         quarter="WIN",
         year=2023,
-        sections=[
-            # ... more sections
+        meetings=[
+            # ... more meetings
         ]
     )
 ]
@@ -123,10 +123,10 @@ def parse_schedule_html(html: str, quarter: str, year: int) -> List[Course]:
         course_code = header_data['code']
         print(f"✅ Header parsed: {course_code}")
         
-        # Parse course sections
-        print("📋 Parsing course sections...")
-        sections = _parse_course_sections(course_block, course_code, quarter, year)
-        print(f"✅ Found {len(sections)} sections")
+        # Parse course meetings
+        print("📋 Parsing course meetings...")
+        meetings = _parse_course_meetings(course_block, course_code, quarter, year)
+        print(f"✅ Found {len(meetings)} meetings")
         
         # Create Course object
         print("📋 Creating Course object...")
@@ -137,15 +137,15 @@ def parse_schedule_html(html: str, quarter: str, year: int) -> List[Course]:
             credits=header_data['credits'],
             quarter=quarter,
             year=year,
-            sections=sections
+            meetings=meetings
         )
         
         courses.append(course)
-        print(f"✅ Course created: {course_code} with {len(sections)} sections")
+        print(f"✅ Course created: {course_code} with {len(meetings)} meetings")
     
     print(f"\n🎯 PARSING COMPLETE")
     print(f"   Total courses parsed: {len(courses)}")
-    print(f"   Total sections: {sum(len(course.sections) for course in courses)}")
+    print(f"   Total meetings: {sum(len(course.meetings) for course in courses)}")
     print("=" * 80)
     
     return courses
@@ -323,76 +323,76 @@ def _parse_course_header(course_block: str) -> Dict[str, str]:
     return result
 
 
-def _parse_course_sections(course_block: str, course_code: str, quarter: str, year: int) -> List[CourseSection]:
+def _parse_course_meetings(course_block: str, course_code: str, quarter: str, year: int) -> List[CourseMeeting]:
     """
-    Parse individual sections from a course block.
+    Parse individual meetings from a course block.
     
     Args:
-        course_block: HTML block containing one course and its sections
+        course_block: HTML block containing one course and its meetings
         course_code: Course code (e.g., "CSE 122")
         quarter: Quarter code (e.g., "WIN")
         year: Year (e.g., 2023)
         
     Returns:
-        List[CourseSection]: List of parsed section objects
+        List[CourseMeeting]: List of parsed meeting objects
 
 
         
     """
     print("=" * 60)
-    print("PARSING COURSE SECTIONS")
+    print("PARSING COURSE MEETINGS")
     print("=" * 60)
     print(f"📚 Course: {course_code}")
     print(f"📅 Quarter: {quarter} {year}")
     
-    # Find all section tables (tables without background color)
-    section_pattern = r'<table[^>]*(?!bgcolor)[^>]*>.*?</table>'
-    section_tables = re.findall(section_pattern, course_block, re.DOTALL)
+    # Find all meeting tables (tables without background color)
+    meeting_pattern = r'<table[^>]*(?!bgcolor)[^>]*>.*?</table>'
+    meeting_tables = re.findall(meeting_pattern, course_block, re.DOTALL)
     
-    print(f"🔍 Found {len(section_tables)} section tables")
+    print(f"🔍 Found {len(meeting_tables)} meeting tables")
     
-    sections = []
+    meetings = []
     
-    for i, section_html in enumerate(section_tables):
-        print(f"\n--- Section {i+1} ---")
-        print(f"📋 Section HTML length: {len(section_html)} characters")
-        print(f"📋 Section preview: {section_html[:150]}...")
+    for i, meeting_html in enumerate(meeting_tables):
+        print(f"\n--- Meeting {i+1} ---")
+        print(f"📋 Meeting HTML length: {len(meeting_html)} characters")
+        print(f"📋 Meeting preview: {meeting_html[:150]}...")
         
-        # Extract section data from <pre> tags (they don't have closing </pre> tags)
+        # Extract meeting data from <pre> tags (they don't have closing </pre> tags)
         pre_pattern = r'<pre[^>]*>(.*?)(?=</td></tr></table>)'
-        pre_match = re.search(pre_pattern, section_html, re.DOTALL)
+        pre_match = re.search(pre_pattern, meeting_html, re.DOTALL)
         
         if not pre_match:
-            print("❌ No <pre> tag found in section")
+            print("❌ No <pre> tag found in meeting")
             continue
         
-        section_text = pre_match.group(1).strip()
-        print(f"📝 Section text: '{section_text}'")
+        meeting_text = pre_match.group(1).strip()
+        print(f"📝 Meeting text: '{meeting_text}'")
         
-        # Parse section data using regex
-        # Pattern: <A HREF=...>SLN</A> SectionID SectionType Days Time Building Room Instructor Status Enrolled/Capacity
-        # The format is: SLN SectionID SectionType Days Time * * Instructor Status Enrolled/Capacity
-        section_pattern = r'<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+([^\s]+)\s+\*\s+\*\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\d+)'
-        section_match = re.search(section_pattern, section_text)
+        # Parse meeting data using regex
+        # Pattern: <A HREF=...>SLN</A> MeetingID MeetingType Days Time Building Room Instructor Status Enrolled/Capacity
+        # The format is: SLN MeetingID MeetingType Days Time * * Instructor Status Enrolled/Capacity
+        meeting_pattern = r'<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+([^\s]+)\s+\*\s+\*\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\d+)'
+        meeting_match = re.search(meeting_pattern, meeting_text)
         
-        if section_match:
-            sln = section_match.group(1)
-            section_id = section_match.group(2)
-            section_type = section_match.group(3)
-            days = section_match.group(4)
-            time = section_match.group(5)
+        if meeting_match:
+            sln = meeting_match.group(1)
+            meeting_id = meeting_match.group(2)
+            meeting_type = meeting_match.group(3)
+            days = meeting_match.group(4)
+            time = meeting_match.group(5)
             # Building and room are marked as * * in this format
             building = "*"
             room = "*"
-            instructor = section_match.group(6).strip()
-            status = section_match.group(7)
-            enrolled = int(section_match.group(8))
-            capacity = int(section_match.group(9))
+            instructor = meeting_match.group(6).strip()
+            status = meeting_match.group(7)
+            enrolled = int(meeting_match.group(8))
+            capacity = int(meeting_match.group(9))
             
-            print(f"✅ Parsed section data:")
+            print(f"✅ Parsed meeting data:")
             print(f"   SLN: {sln}")
-            print(f"   Section ID: {section_id}")
-            print(f"   Section Type: {section_type}")
+            print(f"   Meeting ID: {meeting_id}")
+            print(f"   Meeting Type: {meeting_type}")
             print(f"   Days: {days}")
             print(f"   Time: {time}")
             print(f"   Building: {building}")
@@ -401,12 +401,12 @@ def _parse_course_sections(course_block: str, course_code: str, quarter: str, ye
             print(f"   Status: {status}")
             print(f"   Enrollment: {enrolled}/{capacity}")
             
-            # Create CourseSection object (placeholder for now)
-            section = CourseSection(
+            # Create CourseMeeting object
+            meeting = CourseMeeting(
                 sln=sln,
                 course_code=course_code,
-                section_id=section_id,
-                section_type=section_type,
+                meeting_id=meeting_id,
+                meeting_type=meeting_type,
                 days=days,
                 time=time,
                 building=building,
@@ -419,17 +419,17 @@ def _parse_course_sections(course_block: str, course_code: str, quarter: str, ye
                 year=year,
                 notes=None
             )
-            sections.append(section)
+            meetings.append(meeting)
             
         else:
-            print("❌ Could not parse section data")
-            print(f"   Raw text: '{section_text}'")
+            print("❌ Could not parse meeting data")
+            print(f"   Raw text: '{meeting_text}'")
     
-    print(f"\n✅ Section parsing complete:")
-    print(f"   Found {len(sections)} valid sections")
+    print(f"\n✅ Meeting parsing complete:")
+    print(f"   Found {len(meetings)} valid meetings")
     print("=" * 60)
     
-    return sections
+    return meetings
 
 
 def _clean_instructor_name(instructor: str) -> str:
@@ -517,7 +517,7 @@ FUNCTIONS YOU SHOULD USE:
 
 5. List/Data Structure Methods:
    courses.append(course)          # Add to list
-   sections = []                   # Create empty list
+   meetings = []                   # Create empty list
    course_dict = {}                # Create empty dict
 
 FUNCTIONS YOU SHOULD NOT USE:
@@ -552,7 +552,7 @@ USEFUL REGEX PATTERNS:
 1. Course blocks:
    r'<table bgcolor=\'#99ccff\'.*?</table>(?:<table[^>]*>.*?</table>)*'
 
-2. Section data:
+2. Meeting data:
    r'<A HREF=[^>]*>(+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(+-+)\s+<A[^>]*>(\w+)</A>\s+(+)\s+([^<]+?)\s+(Open|Closed)\s+(+)/(+)'
 
 3. Course code and title:
@@ -575,7 +575,7 @@ TESTING TIPS:
 
 3. Use print statements for debugging:
    print(f"Found {len(courses)} courses")
-   print(f"Section data: {section_data}")
+   print(f"Meeting data: {meeting_data}")
 
 4. Handle edge cases:
    - Empty strings

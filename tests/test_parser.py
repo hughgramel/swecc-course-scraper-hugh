@@ -26,7 +26,7 @@ try:
         parse_schedule_html,
         _extract_course_blocks,
         _parse_course_header,
-        _parse_course_sections,
+        _parse_course_meetings,
         _clean_instructor_name,
         _parse_time_slot,
         _parse_enrollment_numbers
@@ -190,8 +190,8 @@ class TestParseCourseHeader:
         except NotImplementedError:
             pytest.skip("Function not yet implemented")
 
-class TestParseCourseSections:
-    """Test the _parse_course_sections function."""
+class TestParseCourseMeetings:
+    """Test the _parse_course_meetings function."""
     
     def setup_method(self):
         """Load test HTML and extract a sample course block."""
@@ -212,10 +212,10 @@ class TestParseCourseSections:
         if not PARSER_AVAILABLE:
             pytest.skip("Parser functions not yet implemented")
         
-        assert _parse_course_sections is not None
+        assert _parse_course_meetings is not None
     
-    def test_parse_course_sections(self):
-        """Test parsing course sections."""
+    def test_parse_course_meetings(self):
+        """Test parsing course meetings."""
         if not PARSER_AVAILABLE:
             pytest.skip("Parser functions not yet implemented")
         
@@ -223,8 +223,8 @@ class TestParseCourseSections:
             pytest.skip("No sample course block available")
         
         try:
-            result = _parse_course_sections(self.sample_course_block, "MATH 103", "WIN", 2023)
-            print(f"\nCourse sections result: {len(result) if isinstance(result, list) else result}")
+            result = _parse_course_meetings(self.sample_course_block, "MATH 103", "WIN", 2023)
+            print(f"\nCourse meetings result: {len(result) if isinstance(result, list) else result}")
             
             # Basic validation - function should return a list
             assert isinstance(result, list), f"Expected list, got {type(result)}"
@@ -326,8 +326,8 @@ def run_specific_test(function_name):
         pytest.main([__file__ + "::TestExtractCourseBlocks", "-v"])
     elif function_name == "parse_course_header":
         pytest.main([__file__ + "::TestParseCourseHeader", "-v"])
-    elif function_name == "parse_course_sections":
-        pytest.main([__file__ + "::TestParseCourseSections", "-v"])
+    elif function_name == "parse_course_meetings":
+        pytest.main([__file__ + "::TestParseCourseMeetings", "-v"])
     elif function_name == "utility_functions":
         pytest.main([__file__ + "::TestUtilityFunctions", "-v"])
     elif function_name == "integration":
@@ -336,7 +336,7 @@ def run_specific_test(function_name):
         pytest.main([__file__, "-v"])
     else:
         print(f"Unknown function: {function_name}")
-        print("Available functions: extract_course_blocks, parse_course_header, parse_course_sections, utility_functions, integration, all")
+        print("Available functions: extract_course_blocks, parse_course_header, parse_course_meetings, utility_functions, integration, all")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
@@ -351,7 +351,7 @@ if __name__ == "__main__":
         print("Available functions:")
         print("  extract_course_blocks  - Test course block extraction")
         print("  parse_course_header    - Test course header parsing")
-        print("  parse_course_sections  - Test course section parsing")
+        print("  parse_course_meetings  - Test course meeting parsing")
         print("  utility_functions      - Test utility functions")
         print("  integration           - Test main integration function")
         print("  all                   - Test all functions")
