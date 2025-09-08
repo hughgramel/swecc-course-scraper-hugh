@@ -1,0 +1,598 @@
+🧪 Parser Test Results
+==================================================
+
+Testing imports...
+✅ Imports successful
+
+Testing MATH AUT 2023 Block 7...
+✅ Block loaded successfully
+✅ Found 60 total meeting objects
+
+📊 Results by SLN:
+  SLN 18214: 1 meeting object(s)
+    1. ID: A, Time: 830-920
+       Building: PCAR, Room: 192
+       Instructor: Heald,Andy M
+       Status: Open (227/240)
+       Credits: '5', Type: ''
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18215: 2 meeting object(s)
+    1. ID: AA, Time: 830-920
+       Building: LOW, Room: 217
+       Instructor: Catron,Spencer
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: AA-1, Time: 830-950
+       Building: CDH, Room: 128
+       Instructor: Catron,Spencer
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18216: 2 meeting object(s)
+    1. ID: AB, Time: 930-1020
+       Building: LOW, Room: 217
+       Instructor: Catron,Spencer
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: AB-1, Time: 1000-1120
+       Building: CDH, Room: 128
+       Instructor: Catron,Spencer
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18217: 2 meeting object(s)
+    1. ID: AC, Time: 830-920
+       Building: LOW, Room: 219
+       Instructor: Karki,Samip
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: AC-1, Time: 830-950
+       Building: GLD, Room: 436
+       Instructor: Karki,Samip
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18218: 2 meeting object(s)
+    1. ID: AD, Time: 930-1020
+       Building: LOW, Room: 219
+       Instructor: Karki,Samip
+       Status: Closed (30/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: AD-1, Time: 1000-1120
+       Building: GLD, Room: 436
+       Instructor: Karki,Samip
+       Status: Closed (30/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18219: 2 meeting object(s)
+    1. ID: AE, Time: 830-920
+       Building: THO, Room: 211
+       Instructor: Wu,Ruirui
+       Status: Open (26/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: AE-1, Time: 830-950
+       Building: BNS, Room: 115
+       Instructor: Wu,Ruirui
+       Status: Open (26/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18220: 2 meeting object(s)
+    1. ID: AF, Time: 930-1020
+       Building: THO, Room: 211
+       Instructor: Wu,Ruirui
+       Status: Closed (30/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: AF-1, Time: 1000-1120
+       Building: BNS, Room: 115
+       Instructor: Wu,Ruirui
+       Status: Closed (30/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18221: 2 meeting object(s)
+    1. ID: AG, Time: 830-920
+       Building: MGH, Room: 242
+       Instructor: Tawfeek,Andrew
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: AG-1, Time: 830-950
+       Building: CMU, Room: 228
+       Instructor: Tawfeek,Andrew
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18222: 2 meeting object(s)
+    1. ID: AH, Time: 930-1020
+       Building: MGH, Room: 242
+       Instructor: Tawfeek,Andrew
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: AH-1, Time: 1000-1120
+       Building: CMU, Room: 228
+       Instructor: Tawfeek,Andrew
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18223: 1 meeting object(s)
+    1. ID: B, Time: 930-1020
+       Building: PCAR, Room: 192
+       Instructor: Loveless,Andrew
+       Status: Open (217/240)
+       Credits: '5', Type: ''
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18224: 2 meeting object(s)
+    1. ID: BA, Time: 1030-1120
+       Building: LOW, Room: 217
+       Instructor: Cladouhos,Henry Boyles
+       Status: Closed (30/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.'
+
+    2. ID: BA-1, Time: 1130-1250
+       Building: BNS, Room: 115
+       Instructor: Cladouhos,Henry Boyles
+       Status: Closed (30/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.'
+
+  SLN 18225: 2 meeting object(s)
+    1. ID: BB, Time: 1130-1220
+       Building: LOW, Room: 217
+       Instructor: Cladouhos,Henry Boyles
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: BB-1, Time: 100-220
+       Building: BNS, Room: 115
+       Instructor: Cladouhos,Henry Boyles
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18226: 2 meeting object(s)
+    1. ID: BC, Time: 1030-1120
+       Building: LOW, Room: 219
+       Instructor: Debnath,Arkamouli
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.'
+
+    2. ID: BC-1, Time: 1130-1250
+       Building: SIG, Room: 228
+       Instructor: Debnath,Arkamouli
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.'
+
+  SLN 18227: 2 meeting object(s)
+    1. ID: BD, Time: 1130-1220
+       Building: LOW, Room: 219
+       Instructor: Debnath,Arkamouli
+       Status: Open (26/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: BD-1, Time: 100-220
+       Building: SIG, Room: 228
+       Instructor: Debnath,Arkamouli
+       Status: Open (26/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18228: 2 meeting object(s)
+    1. ID: BE, Time: 1030-1120
+       Building: THO, Room: 211
+       Instructor: Niu,Andrew
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'CANNOT BE OVERLOADED'
+
+    2. ID: BE-1, Time: 1130-1250
+       Building: MAR, Room: 168
+       Instructor: Niu,Andrew
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'CANNOT BE OVERLOADED'
+
+  SLN 18229: 2 meeting object(s)
+    1. ID: BF, Time: 1130-1220
+       Building: THO, Room: 211
+       Instructor: Niu,Andrew
+       Status: Open (26/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: BF-1, Time: 100-220
+       Building: MAR, Room: 168
+       Instructor: Niu,Andrew
+       Status: Open (26/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18230: 2 meeting object(s)
+    1. ID: BG, Time: 1030-1120
+       Building: SIG, Room: 226
+       Instructor: Lindbloom-Airey,Sam
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: BG-1, Time: 1130-1250
+       Building: BLD, Room: 286
+       Instructor: Lindbloom-Airey,Sam
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18231: 2 meeting object(s)
+    1. ID: BH, Time: 1130-1220
+       Building: SIG, Room: 225
+       Instructor: Lindbloom-Airey,Sam
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: BH-1, Time: 100-220
+       Building: BLD, Room: 286
+       Instructor: Lindbloom-Airey,Sam
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18232: 1 meeting object(s)
+    1. ID: C, Time: 1030-1120
+       Building: PCAR, Room: 192
+       Instructor: Loveless,Andrew
+       Status: Open (221/240)
+       Credits: '5', Type: ''
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18233: 2 meeting object(s)
+    1. ID: CA, Time: 1230-120
+       Building: MEB, Room: 250
+       Instructor: Klingner,Tyson
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: CA-1, Time: 230-350
+       Building: CDH, Room: 128
+       Instructor: Klingner,Tyson
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18234: 2 meeting object(s)
+    1. ID: CB, Time: 130-220
+       Building: MEB, Room: 250
+       Instructor: Klingner,Tyson
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.'
+
+    2. ID: CB-1, Time: 400-520
+       Building: CDH, Room: 128
+       Instructor: Klingner,Tyson
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.'
+
+  SLN 18235: 2 meeting object(s)
+    1. ID: CC, Time: 1230-120
+       Building: THO, Room: 211
+       Instructor: Aguilar,Andrew
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: CC-1, Time: 230-350
+       Building: GLD, Room: 436
+       Instructor: Aguilar,Andrew
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18236: 2 meeting object(s)
+    1. ID: CD, Time: 130-220
+       Building: THO, Room: 211
+       Instructor: Aguilar,Andrew
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: CD-1, Time: 400-520
+       Building: GLD, Room: 436
+       Instructor: Aguilar,Andrew
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18237: 2 meeting object(s)
+    1. ID: CE, Time: 230-320
+       Building: LOW, Room: 217
+       Instructor: Zeng,Michael
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'CANNOT BE OVERLOADED'
+
+    2. ID: CE-1, Time: 230-350
+       Building: BNS, Room: 115
+       Instructor: Zeng,Michael
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'CANNOT BE OVERLOADED'
+
+  SLN 18238: 2 meeting object(s)
+    1. ID: CF, Time: 330-420
+       Building: LOW, Room: 217
+       Instructor: Zeng,Michael
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: CF-1, Time: 400-520
+       Building: BNS, Room: 115
+       Instructor: Zeng,Michael
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18239: 2 meeting object(s)
+    1. ID: CG, Time: 230-320
+       Building: LOW, Room: 219
+       Instructor: JAMES,TAFARI
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: CG-1, Time: 230-350
+       Building: MGH, Room: 231
+       Instructor: JAMES,TAFARI
+       Status: Open (29/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18240: 2 meeting object(s)
+    1. ID: CH, Time: 330-420
+       Building: LOW, Room: 219
+       Instructor: JAMES,TAFARI
+       Status: Open (28/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+    2. ID: CH-1, Time: 400-520
+       Building: MGH, Room: 231
+       Instructor: JAMES,TAFARI
+       Status: Open (28/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'NO OVERLOADS'
+
+  SLN 18241: 1 meeting object(s)
+    1. ID: D, Time: Conroy,Matthew
+       Building: , Room: 
+       Instructor: Conroy,Matthew
+       Status: Open (100/120)
+       Credits: '5', Type: ''
+       Enrl Restr: ''
+       Additional Code: 'B'
+       Description: 'MWF ASYNCHRONOUS REMOTE LECTURES T/TH IN-PERSON SECTIONS AND EXAMS MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18242: 2 meeting object(s)
+    1. ID: DA, Time: 1230-120
+       Building: LOW, Room: 217
+       Instructor: Crepeau,Natasha
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: DA-1, Time: 1130-1250
+       Building: CDH, Room: 128
+       Instructor: Crepeau,Natasha
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18243: 2 meeting object(s)
+    1. ID: DB, Time: 130-220
+       Building: LOW, Room: 217
+       Instructor: Niu,Nelson Shuheng
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: DB-1, Time: 100-220
+       Building: CDH, Room: 128
+       Instructor: Niu,Nelson Shuheng
+       Status: Open (25/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18244: 2 meeting object(s)
+    1. ID: DC, Time: 1230-120
+       Building: LOW, Room: 219
+       Instructor: Yang,Yirong
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: DC-1, Time: 1130-1250
+       Building: GLD, Room: 436
+       Instructor: Yang,Yirong
+       Status: Open (27/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+  SLN 18245: 2 meeting object(s)
+    1. ID: DD, Time: 130-220
+       Building: LOW, Room: 219
+       Instructor: Son,Hyojeong
+       Status: Open (23/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+    2. ID: DD-1, Time: 100-220
+       Building: GLD, Room: 436
+       Instructor: Son,Hyojeong
+       Status: Open (23/30)
+       Credits: '', Type: 'QZ'
+       Enrl Restr: ''
+       Additional Code: ''
+       Description: 'MATH 125 CANNOT BE OVERLOADED'
+
+📋 Expected vs Actual Comparison:
+  ✅ SLN 18214: Expected 1, Got 1
+  ✅ SLN 18215: Expected 2, Got 2
+  ✅ SLN 18216: Expected 2, Got 2
+  ✅ SLN 18223: Expected 1, Got 1
+  ✅ SLN 18224: Expected 2, Got 2
+  ✅ SLN 18232: Expected 1, Got 1
+  ✅ SLN 18241: Expected 1, Got 1
+
+🔍 'To be arranged' meetings: 0
+
+🔍 Meetings with additional codes: 1
+  SLN 18241: Additional code 'B'
+
+✅ Parser test completed successfully!

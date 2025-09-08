@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "/Users/hughgramelspacher/repos/swecc-course-scraper-hugh/test_parser_fix.py", line 34, in test_parser_fix
+    courses = parse_schedule_html(html_content, "AUT", 2023)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hughgramelspacher/repos/swecc-course-scraper-hugh/swecc_course_scraper/commands/parser.py", line 148, in parse_schedule_html
+    meetings = _parse_course_meetings(course_block, course_code, quarter, year)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hughgramelspacher/repos/swecc-course-scraper-hugh/swecc_course_scraper/commands/parser.py", line 383, in _parse_course_meetings
+    meeting_tables = re.findall(meeting_pattern, course_block, re.DOTALL)
+                     ^^
+UnboundLocalError: cannot access local variable 're' where it is not associated with a value
+Testing parser fix...
+✅ Parser imported successfully
+📄 HTML loaded: 172103 characters
+================================================================================
+PARSING SCHEDULE HTML
+================================================================================
+📅 Quarter: AUT 2023
+📄 HTML length: 172103 characters
+
+🔍 Step 1: Extracting course blocks...
+Extracting course blocks...
+Detected AUT quarter (color: #ffcccc)
+Extracted content between </P> and <P>: 165939 characters
+After removing first table and <br>: 163635 characters
+Found 57 course blocks
+✅ Found 57 course blocks
+
+🔍 Step 2: Processing 57 course blocks...
+
+--- Processing Course Block 1/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 248 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math102>MATH&nbsp;&nbsp; 102 </A>&nbsp;<A HREF=/students/crscat/math.html#math102>ALGEBRA</A></b></td><td width="15%"><b></b></td>...
+📚 Course Code: 'MATH  102'
+📖 Title: 'ALGEBRA'
+ℹ️  No prerequisites found
+ℹ️  No credits found
+ℹ️  No credit types found
+✅ Header parsing complete:
+   Result: {'code': 'MATH  102', 'title': 'ALGEBRA', 'prerequisites': '', 'credits': '', 'credit_types': ''}
+============================================================
+✅ Header parsed: MATH  102
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  102
+📅 Quarter: AUT 2023
+❌ Error: cannot access local variable 're' where it is not associated with a value

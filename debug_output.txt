@@ -1,0 +1,8 @@
+Testing regex pattern:
+Pattern: Restr\s+<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(to be arranged)\s+(.+?)\s+(Open|Closed)\s+(\d+)/(\s*\d+E?)(?:\s+(\w+))?
+Text: Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18195>18195</A> G  5       to be arranged                  Bekyel,Ebru                Open     87/ 120                B
+
+❌ No match found
+
+Trying simpler pattern...
+❌ Simple pattern also failed

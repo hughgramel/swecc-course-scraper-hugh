@@ -30,35 +30,55 @@ Example of what parse_schedule_html() should return:
                 sln="12924",
                 course_code="CSE 122",
                 meeting_id="A",
-                meeting_type="4",
+                meeting_type_code="",
+                credits="4",
+                meeting_date="WF",
                 days="WF",
                 time="1130-1220",
                 building="KNE",
                 room="130",
                 instructor="Natsuhara,Miya Kaye",
+                professor_name="Natsuhara,Miya Kaye",
                 status="Open",
                 enrolled=357,
                 capacity=376,
+                max_capacity=376,
+                current_capacity=357,
+                meeting_classification="lecture",
                 quarter="WIN",
                 year=2023,
-                notes="NO CREDIT FOR STUDENTS WHO HAVE COMPLETED CSE 143"
+                meeting_times="1130-1220",
+                notes="NO CREDIT FOR STUDENTS WHO HAVE COMPLETED CSE 143",
+                description="",
+                additional_code="",
+                enrl_restr=""
             ),
             CourseMeeting(
                 sln="12925",
                 course_code="CSE 122",
                 meeting_id="AA",
-                meeting_type="QZ",
+                meeting_type_code="QZ",
+                credits="",
+                meeting_date="TTh",
                 days="TTh",
                 time="830-920",
                 building="MGH",
                 room="288",
                 instructor="Lin,Melissa",
+                professor_name="Lin,Melissa",
                 status="Open",
                 enrolled=17,
                 capacity=21,
+                max_capacity=21,
+                current_capacity=17,
+                meeting_classification="quiz",
                 quarter="WIN",
                 year=2023,
-                notes=None
+                meeting_times="830-920",
+                notes=None,
+                description="",
+                additional_code="",
+                enrl_restr=""
             )
         ]
     ),
@@ -110,38 +130,45 @@ def parse_schedule_html(html: str, quarter: str, year: int) -> List[Course]:
     print(f"\n🔍 Step 2: Processing {len(course_blocks)} course blocks...")
     
     for i, course_block in enumerate(course_blocks):
-        print(f"\n--- Processing Course Block {i+1}/{len(course_blocks)} ---")
-        
-        # Parse course header
-        print("📋 Parsing course header...")
-        header_data = _parse_course_header(course_block)
+        # Parse course header first to get course code
+        header_data = _parse_course_header(course_block, show_debug=False)
         
         if not header_data or not header_data.get('code'):
-            print(f"❌ Skipping block {i+1} - no valid header data")
             continue
         
         course_code = header_data['code']
-        print(f"✅ Header parsed: {course_code}")
+        is_math116 = "116" in course_code
+        
+        # Only show output for MATH 116 courses
+        if is_math116:
+            print(f"\n--- Processing Course Block {i+1}/{len(course_blocks)} ---")
+            print("📋 Parsing course header...")
+            # Re-parse header with debug output for MATH 116
+            _parse_course_header(course_block, show_debug=True)
+            print(f"✅ Header parsed: {course_code}")
+            print("📋 Parsing course meetings...")
         
         # Parse course meetings
-        print("📋 Parsing course meetings...")
         meetings = _parse_course_meetings(course_block, course_code, quarter, year)
-        print(f"✅ Found {len(meetings)} meetings")
         
-        # Create Course object
-        print("📋 Creating Course object...")
+        if is_math116:
+            print(f"✅ Found {len(meetings)} meetings")
+            print("📋 Creating Course object...")
         course = Course(
             course_code=header_data['code'],
             title=header_data['title'],
             prerequisites=header_data['prerequisites'],
             credits=header_data['credits'],
+            credit_types=header_data['credit_types'],
             quarter=quarter,
             year=year,
             meetings=meetings
         )
         
         courses.append(course)
-        print(f"✅ Course created: {course_code} with {len(meetings)} meetings")
+        
+        if is_math116:
+            print(f"✅ Course created: {course_code} with {len(meetings)} meetings")
     
     print(f"\n🎯 PARSING COMPLETE")
     print(f"   Total courses parsed: {len(courses)}")
@@ -236,7 +263,7 @@ def _extract_course_blocks(html: str) -> List[str]:
     return course_blocks
 
 
-def _parse_course_header(course_block: str) -> Dict[str, str]:
+def _parse_course_header(course_block: str, show_debug: bool = True) -> Dict[str, str]:
     """
     Parse course header information from a course block.
     
@@ -246,22 +273,25 @@ def _parse_course_header(course_block: str) -> Dict[str, str]:
     Returns:
         Dict[str, str]: Dictionary with keys: 'code', 'title', 'prerequisites', 'credits'
     """
-    print("=" * 60)
-    print("PARSING COURSE HEADER")
-    print("=" * 60)
+    if show_debug:
+        print("=" * 60)
+        print("PARSING COURSE HEADER")
+        print("=" * 60)
 
     # Find the course header table (with background color)
     header_pattern = r'<table[^>]*bgcolor=[\'"][^\'\"]*[\'"][^>]*>.*?</table>'
     header_match = re.search(header_pattern, course_block, re.DOTALL)
     
     if not header_match:
-        print("❌ No course header table found")
+        if show_debug:
+            print("❌ No course header table found")
         return {}
     
     header_html = header_match.group(0)
-    print(f"📋 Found course header table:")
-    print(f"   Length: {len(header_html)} characters")
-    print(f"   Preview: {header_html[:200]}...")
+    if show_debug:
+        print(f"📋 Found course header table:")
+        print(f"   Length: {len(header_html)} characters")
+        print(f"   Preview: {header_html[:200]}...")
     
     # Extract course code from <A NAME=...> tags
     code_pattern = r'<A NAME=([^>]*)>([^<]+)</A>'
@@ -271,9 +301,11 @@ def _parse_course_header(course_block: str) -> Dict[str, str]:
         course_code = code_match.group(2).strip()
         # Clean up HTML entities
         course_code = course_code.replace('&nbsp;', ' ').replace('  ', ' ').strip()
-        print(f"📚 Course Code: '{course_code}'")
+        if show_debug:
+            print(f"📚 Course Code: '{course_code}'")
     else:
-        print("❌ No course code found")
+        if show_debug:
+            print("❌ No course code found")
         course_code = ""
     
     # Extract title from course title link
@@ -282,9 +314,11 @@ def _parse_course_header(course_block: str) -> Dict[str, str]:
     
     if title_match:
         title = title_match.group(1).strip()
-        print(f"📖 Title: '{title}'")
+        if show_debug:
+            print(f"📖 Title: '{title}'")
     else:
-        print("❌ No title found")
+        if show_debug:
+            print("❌ No title found")
         title = ""
     
     # Extract prerequisites from header text
@@ -293,9 +327,11 @@ def _parse_course_header(course_block: str) -> Dict[str, str]:
     
     if prereq_match:
         prerequisites = prereq_match.group(1).strip()
-        print(f"📋 Prerequisites: '{prerequisites}'")
+        if show_debug:
+            print(f"📋 Prerequisites: '{prerequisites}'")
     else:
-        print("ℹ️  No prerequisites found")
+        if show_debug:
+            print("ℹ️  No prerequisites found")
         prerequisites = ""
     
     # Extract credits from header text
@@ -304,21 +340,38 @@ def _parse_course_header(course_block: str) -> Dict[str, str]:
     
     if credits_match:
         credits = credits_match.group(1)
-        print(f"🎓 Credits: '{credits}'")
+        if show_debug:
+            print(f"🎓 Credits: '{credits}'")
     else:
-        print("ℹ️  No credits found")
+        if show_debug:
+            print("ℹ️  No credits found")
         credits = ""
+    
+    # Extract credit types from parentheses (e.g., "(NSc,RSN)")
+    credit_types_pattern = r'\(([^)]+)\)'
+    credit_types_match = re.search(credit_types_pattern, header_html)
+    
+    if credit_types_match:
+        credit_types = credit_types_match.group(1)
+        if show_debug:
+            print(f"🏷️  Credit Types: '{credit_types}'")
+    else:
+        if show_debug:
+            print("ℹ️  No credit types found")
+        credit_types = ""
     
     result = {
         'code': course_code,
         'title': title,
         'prerequisites': prerequisites,
-        'credits': credits
+        'credits': credits,
+        'credit_types': credit_types
     }
     
-    print(f"✅ Header parsing complete:")
-    print(f"   Result: {result}")
-    print("=" * 60)
+    if show_debug:
+        print(f"✅ Header parsing complete:")
+        print(f"   Result: {result}")
+        print("=" * 60)
     
     return result
 
@@ -339,95 +392,378 @@ def _parse_course_meetings(course_block: str, course_code: str, quarter: str, ye
 
         
     """
-    print("=" * 60)
-    print("PARSING COURSE MEETINGS")
-    print("=" * 60)
-    print(f"📚 Course: {course_code}")
-    print(f"📅 Quarter: {quarter} {year}")
+    # Only show debug output for MATH 116
+    is_math116 = "116" in course_code
+    if is_math116:
+        print("=" * 60)
+        print("PARSING COURSE MEETINGS")
+        print("=" * 60)
+        print(f"📚 Course: {course_code}")
+        print(f"📅 Quarter: {quarter} {year}")
     
     # Find all meeting tables (tables without background color)
     meeting_pattern = r'<table[^>]*(?!bgcolor)[^>]*>.*?</table>'
     meeting_tables = re.findall(meeting_pattern, course_block, re.DOTALL)
     
-    print(f"🔍 Found {len(meeting_tables)} meeting tables")
+    if is_math116:
+        print(f"🔍 Found {len(meeting_tables)} meeting tables")
     
     meetings = []
     
     for i, meeting_html in enumerate(meeting_tables):
-        print(f"\n--- Meeting {i+1} ---")
-        print(f"📋 Meeting HTML length: {len(meeting_html)} characters")
-        print(f"📋 Meeting preview: {meeting_html[:150]}...")
+        if is_math116:
+            print(f"\n--- Meeting {i+1} ---")
+            print(f"📋 Meeting HTML length: {len(meeting_html)} characters")
+            print(f"📋 Meeting preview: {meeting_html[:150]}...")
         
         # Extract meeting data from <pre> tags (they don't have closing </pre> tags)
         pre_pattern = r'<pre[^>]*>(.*?)(?=</td></tr></table>)'
         pre_match = re.search(pre_pattern, meeting_html, re.DOTALL)
         
         if not pre_match:
-            print("❌ No <pre> tag found in meeting")
+            if is_math116:
+                print("❌ No <pre> tag found in meeting")
             continue
         
         meeting_text = pre_match.group(1).strip()
-        print(f"📝 Meeting text: '{meeting_text}'")
+        if is_math116:
+            print(f"📝 Meeting text: '{meeting_text}'")
         
-        # Parse meeting data using regex
-        # Pattern: <A HREF=...>SLN</A> MeetingID MeetingType Days Time Building Room Instructor Status Enrolled/Capacity
-        # The format is: SLN MeetingID MeetingType Days Time * * Instructor Status Enrolled/Capacity
-        meeting_pattern = r'<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+([^\s]+)\s+\*\s+\*\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\d+)'
-        meeting_match = re.search(meeting_pattern, meeting_text)
+        # Parse meeting data using a more flexible approach
+        # The structure is: SLN MeetingID Credits/TypeCode MeetingDate Time Building Room Instructor Status Enrolled/Capacity [AdditionalCodes]
+        # But we need to handle:
+        # 1. Multiple meeting times (additional lines)
+        # 2. "to be arranged" times
+        # 3. Additional codes after capacity (like "B")
+        # 4. Complex professor names with spaces/commas
+        # 5. Multiple description lines
+        
+        # First, extract the main line (first line of the meeting)
+        lines = meeting_text.split('\n')
+        main_line = lines[0].strip()
+        additional_lines = [line.strip() for line in lines[1:] if line.strip()]
+        
+        if is_math116:
+            print(f"🔍 Main line: '{main_line}'")
+            print(f"🔍 Additional lines: {additional_lines}")
+        
+        # Parse the main line with multiple patterns to handle different cases
+        # Use more flexible spacing patterns to handle variable whitespace
+        # Case 1: Normal time format with "Restr" prefix
+        # Structure: Restr <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate Time <A HREF=...>Building</A> Room Instructor Status Enrolled/Capacity [AdditionalCode]
+        pattern_normal_restr = r'Restr\s+<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+([^\s]+)\s+<A[^>]*>(\w+)</A>\s+(\w+)\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\s*\d+E?)(?:\s+(\w+))?'
+        
+        # Case 2: "to be arranged" time format with "Restr" prefix
+        # Structure: Restr <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate "to be arranged" [Building/Room] Instructor Status Enrolled/Capacity [AdditionalCode]
+        pattern_arranged_restr = r'Restr\s+<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(to be arranged)\s+([^*]+?)\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\s*\d+E?)(?:\s+(\w+))?'
+        
+        # Case 3: Normal time format without "Restr" prefix (like block_04.html)
+        # Structure: [>] <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate Time [Building/Room] Instructor Status Enrolled/Capacity [AdditionalCode]
+        pattern_normal_no_restr = r'[>\s]*<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+([^\s]+)\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\s*\d+E?)(?:\s+(\w+))?'
+        
+        # Case 4: "to be arranged" time format without "Restr" prefix
+        # Structure: [>] <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate "to be arranged" [Building/Room] Instructor Status Enrolled/Capacity [AdditionalCode]
+        # Building/Room can be "*    *" or empty
+        pattern_arranged_no_restr = r'[>\s]*<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(to be arranged)\s+([^*]*?)\s+([^<]+?)\s+(Open|Closed)\s+(\d+)/(\s*\d+E?)(?:\s+([^<]+?))?'
+        
+        # Case 5: "to be arranged" time format without "Restr" prefix and without Status field
+        # Structure: [>] <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate "to be arranged" [Building/Room] Instructor Enrolled/Capacity [CreditType] [AdditionalCode]
+        pattern_arranged_no_restr_no_status = r'[>\s]*<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(to be arranged)\s+([^*]*?)\s+([^<]+?)\s+(\d+)/(\s*\d+E?)(?:\s+([^<]+?))?(?:\s+([^<]+?))?'
+        
+        # Try patterns in order of preference
+        meeting_match = None
+        pattern_type = None
+        has_restr = False
+        
+        if is_math116:
+            print(f"🔍 Testing regex patterns on main line: '{main_line}'")
+        
+        # Try normal pattern with "Restr" first
+        meeting_match = re.search(pattern_normal_restr, main_line)
+        if meeting_match:
+            pattern_type = "normal"
+            has_restr = True
+            if is_math116:
+                print(f"✅ Matched pattern_normal_restr with {len(meeting_match.groups())} groups")
+        
+        if not meeting_match:
+            # Try normal pattern without "Restr"
+            meeting_match = re.search(pattern_normal_no_restr, main_line)
+            if meeting_match:
+                pattern_type = "normal"
+                has_restr = False
+                if is_math116:
+                    print(f"✅ Matched pattern_normal_no_restr with {len(meeting_match.groups())} groups")
+        
+        if not meeting_match:
+            # Try "to be arranged" pattern with "Restr"
+            meeting_match = re.search(pattern_arranged_restr, main_line)
+            if meeting_match:
+                pattern_type = "arranged"
+                has_restr = True
+                if is_math116:
+                    print(f"✅ Matched pattern_arranged_restr with {len(meeting_match.groups())} groups")
+        
+        if not meeting_match:
+            # Try "to be arranged" pattern without "Restr"
+            meeting_match = re.search(pattern_arranged_no_restr, main_line)
+            if meeting_match:
+                pattern_type = "arranged"
+                has_restr = False
+                if is_math116:
+                    print(f"✅ Matched pattern_arranged_no_restr with {len(meeting_match.groups())} groups")
+        
+        if not meeting_match:
+            # Try "to be arranged" pattern without "Restr" and without Status field
+            meeting_match = re.search(pattern_arranged_no_restr_no_status, main_line)
+            if meeting_match:
+                pattern_type = "arranged_no_status"
+                has_restr = False
+                if is_math116:
+                    print(f"✅ Matched pattern_arranged_no_restr_no_status with {len(meeting_match.groups())} groups")
         
         if meeting_match:
+            if is_math116:
+                print(f"🎯 Using pattern: {pattern_type} (has_restr: {has_restr})")
+                print(f"📊 Groups captured: {len(meeting_match.groups())}")
+                for i, group in enumerate(meeting_match.groups(), 1):
+                    print(f"   Group {i}: '{group}'")
+            
+            # Set enrollment restriction code based on whether "Restr" was found
+            enrl_restr = "Restr" if has_restr else ""
             sln = meeting_match.group(1)
             meeting_id = meeting_match.group(2)
-            meeting_type = meeting_match.group(3)
-            days = meeting_match.group(4)
-            time = meeting_match.group(5)
-            # Building and room are marked as * * in this format
-            building = "*"
-            room = "*"
-            instructor = meeting_match.group(6).strip()
-            status = meeting_match.group(7)
-            enrolled = int(meeting_match.group(8))
-            capacity = int(meeting_match.group(9))
+            credits_or_type = meeting_match.group(3)  # This could be credits (single digit) or type code (like QZ)
+            meeting_date = meeting_match.group(4)     # Meeting date (e.g., "T", "Th", "MWF")
+            time = meeting_match.group(5)             # Time (can be "to be arranged" or specific times)
             
-            print(f"✅ Parsed meeting data:")
-            print(f"   SLN: {sln}")
-            print(f"   Meeting ID: {meeting_id}")
-            print(f"   Meeting Type: {meeting_type}")
-            print(f"   Days: {days}")
-            print(f"   Time: {time}")
-            print(f"   Building: {building}")
-            print(f"   Room: {room}")
-            print(f"   Instructor: {instructor}")
-            print(f"   Status: {status}")
-            print(f"   Enrollment: {enrolled}/{capacity}")
+            if pattern_type == "normal":
+                if has_restr:
+                    # With Restr: Restr <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate Time <A HREF=...>Building</A> Room Instructor Status Enrolled/Capacity [AdditionalCode]
+                    building = meeting_match.group(6)         # Building code (from <A HREF=...>Building</A>)
+                    room = meeting_match.group(7)             # Room number (after </A>)
+                    instructor = (meeting_match.group(8) or "").strip()  # Instructor name (can have spaces/commas)
+                    status = meeting_match.group(9)           # Open/Closed
+                    enrolled = int(meeting_match.group(10))   # Enrolled count
+                    capacity_str = (meeting_match.group(11) or "").strip()  # Capacity (may have E suffix)
+                    additional_code = meeting_match.group(12) if meeting_match.lastindex >= 12 and meeting_match.group(12) else ""  # Additional codes like "B"
+                else:
+                    # Without Restr: [>] <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate Time [Building/Room] Instructor Status Enrolled/Capacity [AdditionalCode]
+                    building_room = (meeting_match.group(6) or "").strip()  # Building/Room info (may be "* *" for to be arranged)
+                    instructor = (meeting_match.group(7) or "").strip()  # Instructor name (can have spaces/commas)
+                    status = meeting_match.group(8)           # Open/Closed
+                    enrolled = int(meeting_match.group(9))   # Enrolled count
+                    capacity_str = (meeting_match.group(10) or "").strip()  # Capacity (may have E suffix)
+                    additional_code = meeting_match.group(11) if meeting_match.lastindex >= 11 and meeting_match.group(11) else ""  # Additional codes like "B"
+                    
+                    # Parse building/room for non-Restr entries
+                    if building_room == "* *":
+                        building = ""
+                        room = ""
+                    else:
+                        # Try to extract building and room from the combined string
+                        building = ""
+                        room = ""
+            else:  # pattern_type == "arranged"
+                if has_restr:
+                    # With Restr: Restr <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate "to be arranged" [Building/Room] Instructor Status Enrolled/Capacity [AdditionalCode]
+                    building_room = (meeting_match.group(6) or "").strip()  # Building/Room info (may be "* *" for to be arranged)
+                    instructor = (meeting_match.group(7) or "").strip()  # Instructor name (can have spaces/commas)
+                    status = meeting_match.group(8)           # Open/Closed
+                    enrolled = int(meeting_match.group(9))   # Enrolled count
+                    capacity_str = (meeting_match.group(10) or "").strip()  # Capacity (may have E suffix)
+                    additional_code = meeting_match.group(11) if meeting_match.lastindex >= 11 and meeting_match.group(11) else ""  # Additional codes like "B"
+                    
+                    # Parse building/room for "to be arranged" entries with Restr
+                    if building_room == "* *" or building_room.strip() == "":
+                        building = ""
+                        room = ""
+                    else:
+                        # Try to extract building and room from the combined string
+                        building = ""
+                        room = ""
+                else:
+                    # Without Restr: [>] <A HREF=...>SLN</A> MeetingID Credits/Type MeetingDate "to be arranged" [Building/Room] Instructor Status Enrolled/Capacity [AdditionalCode]
+                    # Group structure: SLN(1) MeetingID(2) Credits(3) MeetingDate(4) "to be arranged"(5) Building/Room(6) Instructor(7) Status(8) Enrolled(9) Capacity(10) AdditionalCode(11)
+                    building_room = (meeting_match.group(6) or "").strip()  # Building/Room info (may be "* *" for to be arranged)
+                    instructor = (meeting_match.group(7) or "").strip()  # Instructor name (can have spaces/commas)
+                    status = meeting_match.group(8)           # Open/Closed
+                    enrolled = int(meeting_match.group(9))   # Enrolled count
+                    capacity_str = (meeting_match.group(10) or "").strip()  # Capacity (may have E suffix)
+                    additional_code = meeting_match.group(11) if meeting_match.lastindex >= 11 and meeting_match.group(11) else ""  # Additional codes like "B"
             
-            # Create CourseMeeting object
-            meeting = CourseMeeting(
+            # Parse capacity and check for estimated enrollment
+            estimated_enrollment = capacity_str.endswith('E')
+            if estimated_enrollment:
+                try:
+                    capacity = int(capacity_str[:-1])  # Remove 'E' suffix
+                except ValueError:
+                    # If capacity can't be parsed, it might be part of additional_code
+                    if is_math116:
+                        print(f"⚠️ Warning: Could not parse capacity '{capacity_str[:-1]}' for SLN {sln}")
+                    capacity = 0
+            else:
+                try:
+                    capacity = int(capacity_str)
+                except ValueError:
+                    # If capacity can't be parsed, it might be part of additional_code
+                    if is_math116:
+                        print(f"⚠️ Warning: Could not parse capacity '{capacity_str}' for SLN {sln}")
+                    # Try to extract the actual capacity if it contains non-numeric characters
+                    # Look for patterns like "120 B" where B is the additional code
+                    capacity_match = re.search(r'(\d+)', capacity_str)
+                    if capacity_match:
+                        capacity = int(capacity_match.group(1))
+                        # The remaining part might be the additional code
+                        remaining = capacity_str.replace(capacity_match.group(1), '').strip()
+                        if remaining and not additional_code:
+                            additional_code = remaining
+                    else:
+                        # If no numeric capacity found, this might be a credit type or additional code
+                        # Set capacity to 0 and treat the whole string as additional info
+                        capacity = 0
+                        if not additional_code:
+                            additional_code = capacity_str
+            
+            days = meeting_date  # For now, set days same as meeting_date
+            
+            # Determine if this is credits or meeting type code based on meeting_id length
+            if len(meeting_id) == 1:
+                # Single character meeting ID = lecture, next field is credits
+                credits = credits_or_type
+                meeting_type_code = ""  # Lectures don't have type codes
+            else:
+                # Double character meeting ID = other type, next field is type code
+                credits = ""  # Non-lectures don't have credits in this field
+                meeting_type_code = credits_or_type
+            
+            # Process additional lines for multiple meeting times and descriptions
+            additional_meeting_times = []
+            description_lines = []
+            
+            for line in additional_lines:
+                # Check if this line contains additional meeting time information
+                # Pattern: Day Time Building Room Instructor
+                time_pattern = r'^(\w+)\s+([^\s]+)\s+<A[^>]*>(\w+)</A>\s+(\w+)\s+(.+)$'
+                time_match = re.search(time_pattern, line)
+                
+                if time_match:
+                    # This is an additional meeting time
+                    additional_day = time_match.group(1)
+                    additional_time = time_match.group(2)
+                    additional_building = time_match.group(3)
+                    additional_room = time_match.group(4)
+                    additional_instructor = time_match.group(5).strip()
+                    
+                    additional_meeting_times.append({
+                        'day': additional_day,
+                        'time': additional_time,
+                        'building': additional_building,
+                        'room': additional_room,
+                        'instructor': additional_instructor
+                    })
+                else:
+                    # This is a description line
+                    description_lines.append(line)
+            
+            # Combine all description lines
+            description = ' '.join(description_lines).strip()
+            
+            # Create the first CourseMeeting object (main meeting)
+            main_meeting = CourseMeeting(
                 sln=sln,
                 course_code=course_code,
                 meeting_id=meeting_id,
-                meeting_type=meeting_type,
+                meeting_type_code=meeting_type_code,
+                credits=credits,
+                meeting_date=meeting_date,
                 days=days,
                 time=time,
                 building=building,
                 room=room,
                 instructor=instructor,
+                professor_name=instructor,  # Keep for compatibility but they're the same
                 status=status,
                 enrolled=enrolled,
                 capacity=capacity,
+                max_capacity=capacity,
+                current_capacity=enrolled,
+                meeting_classification="",  # Remove this field from CSV output
                 quarter=quarter,
                 year=year,
-                notes=None
+                meeting_times=time,
+                notes=None,
+                description=description,
+                additional_code=additional_code,
+                enrl_restr=enrl_restr,
+                estimated_enrollment=estimated_enrollment
             )
-            meetings.append(meeting)
+            meetings.append(main_meeting)
+            
+            # Create additional CourseMeeting objects for each additional meeting time
+            for i, add_time in enumerate(additional_meeting_times):
+                # Create a unique meeting ID for additional times (e.g., "AA-1", "AA-2")
+                additional_meeting_id = f"{meeting_id}-{i+1}"
+                
+                additional_meeting = CourseMeeting(
+                    sln=sln,  # Same SLN as main meeting
+                    course_code=course_code,
+                    meeting_id=additional_meeting_id,
+                    meeting_type_code=meeting_type_code,
+                    credits=credits,
+                    meeting_date=add_time['day'],
+                    days=add_time['day'],
+                    time=add_time['time'],
+                    building=add_time['building'],
+                    room=add_time['room'],
+                    instructor=add_time['instructor'],
+                    professor_name=add_time['instructor'],  # Keep for compatibility
+                    status=status,  # Same status as main meeting
+                    enrolled=enrolled,  # Same enrollment as main meeting
+                    capacity=capacity,  # Same capacity as main meeting
+                    max_capacity=capacity,
+                    current_capacity=enrolled,
+                    meeting_classification="",  # Remove this field from CSV output
+                    quarter=quarter,
+                    year=year,
+                    meeting_times=add_time['time'],
+                    notes=None,
+                    description=description,  # Same description as main meeting
+                    additional_code=additional_code,
+                    enrl_restr=enrl_restr,  # Same enrollment restriction as main meeting
+                    estimated_enrollment=estimated_enrollment  # Same estimated enrollment as main meeting
+                )
+                meetings.append(additional_meeting)
+            
+            if is_math116:
+                print(f"✅ Parsed meeting data:")
+                print(f"   Main Meeting - SLN: {sln}, ID: {meeting_id}, Credits: {credits}")
+                print(f"   Meeting Type Code: {meeting_type_code}, Date: {meeting_date}")
+                print(f"   Time: {time}, Building: {building}, Room: {room}")
+                print(f"   Instructor: {instructor}, Status: {status}")
+                print(f"   Enrollment: {enrolled}/{capacity}, Additional Code: {additional_code}")
+                print(f"   Enrollment Restriction: {enrl_restr}")
+                print(f"   Estimated Enrollment: {estimated_enrollment}")
+                print(f"   Description: {description}")
+            
+            if additional_meeting_times and is_math116:
+                print(f"   Created {len(additional_meeting_times)} additional meeting objects:")
+                for i, add_time in enumerate(additional_meeting_times):
+                    print(f"     {i+1}. {add_time['day']} {add_time['time']} {add_time['building']} {add_time['room']} {add_time['instructor']}")
+            
+            if is_math116:
+                print(f"   Total meetings created for this section: {1 + len(additional_meeting_times)}")
             
         else:
-            print("❌ Could not parse meeting data")
-            print(f"   Raw text: '{meeting_text}'")
+            if is_math116:
+                print("❌ Could not parse meeting data")
+                print(f"   Raw text: '{meeting_text}'")
+                print("🔍 No regex pattern matched the main line")
     
-    print(f"\n✅ Meeting parsing complete:")
-    print(f"   Found {len(meetings)} valid meetings")
-    print("=" * 60)
+    if is_math116:
+        print(f"\n✅ Meeting parsing complete:")
+        print(f"   Found {len(meetings)} valid meetings")
+        print("=" * 60)
     
     return meetings
 

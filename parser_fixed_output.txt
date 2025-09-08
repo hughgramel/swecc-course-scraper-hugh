@@ -1,0 +1,2164 @@
+🚀 Running Parser on MATH AUT 2023
+============================================================
+📁 Loading: tests/test_files/math_AUT_2023.html
+📄 HTML loaded: 172103 characters
+🔍 Parsing MATH AUT 2023...
+================================================================================
+PARSING SCHEDULE HTML
+================================================================================
+📅 Quarter: AUT 2023
+📄 HTML length: 172103 characters
+
+🔍 Step 1: Extracting course blocks...
+Extracting course blocks...
+Detected AUT quarter (color: #ffcccc)
+Extracted content between </P> and <P>: 165939 characters
+After removing first table and <br>: 163635 characters
+Found 57 course blocks
+✅ Found 57 course blocks
+
+🔍 Step 2: Processing 57 course blocks...
+
+--- Processing Course Block 1/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 248 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math102>MATH&nbsp;&nbsp; 102 </A>&nbsp;<A HREF=/students/crscat/math.html#math102>ALGEBRA</A></b></td><td width="15%"><b></b></td>...
+📚 Course Code: 'MATH  102'
+📖 Title: 'ALGEBRA'
+ℹ️  No prerequisites found
+ℹ️  No credits found
+ℹ️  No credit types found
+✅ Header parsing complete:
+   Result: {'code': 'MATH  102', 'title': 'ALGEBRA', 'prerequisites': '', 'credits': '', 'credit_types': ''}
+============================================================
+✅ Header parsed: MATH  102
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  102
+📅 Quarter: AUT 2023
+🔍 Found 2 meeting tables
+
+--- Meeting 1 ---
+📋 Meeting HTML length: 248 characters
+📋 Meeting preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math102>MATH&nbsp;&nbsp; 102 </A>&nbsp;<A HREF=/students/crscat/math.html#math10...
+❌ No <pre> tag found in meeting
+
+--- Meeting 2 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+      ><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18068>18068</A> A  5   ...
+📝 Meeting text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18068>18068</A> A  5       MTWThF 1030-1120  <A HREF=/students/maps/map.cgi?ICT>ICT</A>  226      Mar,Therese F                       23/  40                      
+                        NOT FOR STUDENTS WHO HAVE ALREADY                                                                                                                   
+                        EARNED CREDIT FOR                                                                                                                                   
+                        MATH 124/MATH 125/MATH 126.                                                                                                                         
+                        EMAIL THERESE@UW.EDU FOR ADD CODE'
+🔍 Main line: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18068>18068</A> A  5       MTWThF 1030-1120  <A HREF=/students/maps/map.cgi?ICT>ICT</A>  226      Mar,Therese F                       23/  40'
+🔍 Additional lines: ['NOT FOR STUDENTS WHO HAVE ALREADY', 'EARNED CREDIT FOR', 'MATH 124/MATH 125/MATH 126.', 'EMAIL THERESE@UW.EDU FOR ADD CODE']
+❌ Could not parse meeting data
+   Raw text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18068>18068</A> A  5       MTWThF 1030-1120  <A HREF=/students/maps/map.cgi?ICT>ICT</A>  226      Mar,Therese F                       23/  40                      
+                        NOT FOR STUDENTS WHO HAVE ALREADY                                                                                                                   
+                        EARNED CREDIT FOR                                                                                                                                   
+                        MATH 124/MATH 125/MATH 126.                                                                                                                         
+                        EMAIL THERESE@UW.EDU FOR ADD CODE'
+
+✅ Meeting parsing complete:
+   Found 0 valid meetings
+============================================================
+✅ Found 0 meetings
+📋 Creating Course object...
+✅ Course created: MATH  102 with 0 meetings
+
+--- Processing Course Block 2/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 261 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math103>MATH&nbsp;&nbsp; 103 </A>&nbsp;<A HREF=/students/crscat/math.html#math103>INTRO ELEM FUNCTION </A></b></td><td width="15%"...
+📚 Course Code: 'MATH  103'
+📖 Title: 'INTRO ELEM FUNCTION'
+ℹ️  No prerequisites found
+ℹ️  No credits found
+ℹ️  No credit types found
+✅ Header parsing complete:
+   Result: {'code': 'MATH  103', 'title': 'INTRO ELEM FUNCTION', 'prerequisites': '', 'credits': '', 'credit_types': ''}
+============================================================
+✅ Header parsed: MATH  103
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  103
+📅 Quarter: AUT 2023
+🔍 Found 2 meeting tables
+
+--- Meeting 1 ---
+📋 Meeting HTML length: 261 characters
+📋 Meeting preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math103>MATH&nbsp;&nbsp; 103 </A>&nbsp;<A HREF=/students/crscat/math.html#math10...
+❌ No <pre> tag found in meeting
+
+--- Meeting 2 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+      ><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18069>18069</A> A  5   ...
+📝 Meeting text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18069>18069</A> A  5       MTWThF 1130-1220  <A HREF=/students/maps/map.cgi?ICT>ICT</A>  226      Skov,Christopher                    14/  40                      
+                        NOT FOR STUDENTS WHO HAVE ALREADY                                                                                                                   
+                        EARNED CREDIT FOR                                                                                                                                   
+                        MATH 124/MATH 125/MATH 126.                                                                                                                         
+                        EMAIL SKOV@UW.EDU FOR ADD CODE'
+🔍 Main line: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18069>18069</A> A  5       MTWThF 1130-1220  <A HREF=/students/maps/map.cgi?ICT>ICT</A>  226      Skov,Christopher                    14/  40'
+🔍 Additional lines: ['NOT FOR STUDENTS WHO HAVE ALREADY', 'EARNED CREDIT FOR', 'MATH 124/MATH 125/MATH 126.', 'EMAIL SKOV@UW.EDU FOR ADD CODE']
+❌ Could not parse meeting data
+   Raw text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18069>18069</A> A  5       MTWThF 1130-1220  <A HREF=/students/maps/map.cgi?ICT>ICT</A>  226      Skov,Christopher                    14/  40                      
+                        NOT FOR STUDENTS WHO HAVE ALREADY                                                                                                                   
+                        EARNED CREDIT FOR                                                                                                                                   
+                        MATH 124/MATH 125/MATH 126.                                                                                                                         
+                        EMAIL SKOV@UW.EDU FOR ADD CODE'
+
+✅ Meeting parsing complete:
+   Found 0 valid meetings
+============================================================
+✅ Found 0 meetings
+📋 Creating Course object...
+✅ Course created: MATH  103 with 0 meetings
+
+--- Processing Course Block 3/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 267 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math111>MATH&nbsp;&nbsp; 111 </A>&nbsp;<A HREF=/students/crscat/math.html#math111>ALGEBRA WITH APPL</A></b></td><td width="15%"><b...
+📚 Course Code: 'MATH  111'
+📖 Title: 'ALGEBRA WITH APPL'
+ℹ️  No prerequisites found
+ℹ️  No credits found
+🏷️  Credit Types: 'NSc,RSN'
+✅ Header parsing complete:
+   Result: {'code': 'MATH  111', 'title': 'ALGEBRA WITH APPL', 'prerequisites': '', 'credits': '', 'credit_types': 'NSc,RSN'}
+============================================================
+✅ Header parsed: MATH  111
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  111
+📅 Quarter: AUT 2023
+🔍 Found 15 meeting tables
+
+--- Meeting 1 ---
+📋 Meeting HTML length: 267 characters
+📋 Meeting preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math111>MATH&nbsp;&nbsp; 111 </A>&nbsp;<A HREF=/students/crscat/math.html#math11...
+❌ No <pre> tag found in meeting
+
+--- Meeting 2 ---
+📋 Meeting HTML length: 829 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18070>18070</A> A  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18070>18070</A> A  5       MWF    1130-1220  <A HREF=/students/maps/map.cgi?PCAR>PCAR</A> 192      Taggart,Jenni              Open    230/ 240                      
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18070>18070</A> A  5       MWF    1130-1220  <A HREF=/students/maps/map.cgi?PCAR>PCAR</A> 192      Taggart,Jenni              Open    230/ 240'
+🔍 Additional lines: ['TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18070, ID: A, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 1130-1220, Building: PCAR, Room: 192
+   Instructor: Taggart,Jenni, Status: Open
+   Enrollment: 230/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 3 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18071>18071</A> AA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18071>18071</A> AA  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      Brown,Madeline E.          Open     39/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18071>18071</A> AA  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      Brown,Madeline E.          Open     39/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18071, ID: AA, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1030-1120, Building: CDH, Room: 101
+   Instructor: Brown,Madeline E., Status: Open
+   Enrollment: 39/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 4 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18072>18072</A> AB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18072>18072</A> AB  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      Brown,Madeline E.          Open     38/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18072>18072</A> AB  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      Brown,Madeline E.          Open     38/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18072, ID: AB, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1130-1220, Building: CDH, Room: 101
+   Instructor: Brown,Madeline E., Status: Open
+   Enrollment: 38/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 5 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18073>18073</A> AC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18073>18073</A> AC  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      Brown,Madeline E.          Open     35/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18073>18073</A> AC  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      Brown,Madeline E.          Open     35/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18073, ID: AC, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1030-1120, Building: CDH, Room: 105
+   Instructor: Brown,Madeline E., Status: Open
+   Enrollment: 35/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 6 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18074>18074</A> AD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18074>18074</A> AD  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      Brown,Madeline E.          Open     39/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18074>18074</A> AD  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      Brown,Madeline E.          Open     39/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18074, ID: AD, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1130-1220, Building: CDH, Room: 105
+   Instructor: Brown,Madeline E., Status: Open
+   Enrollment: 39/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 7 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18075>18075</A> AE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18075>18075</A> AE  QZ     TTh    1230-120   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      Brown,Madeline E.          Open     39/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18075>18075</A> AE  QZ     TTh    1230-120   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      Brown,Madeline E.          Open     39/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18075, ID: AE, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1230-120, Building: CDH, Room: 101
+   Instructor: Brown,Madeline E., Status: Open
+   Enrollment: 39/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 8 ---
+📋 Meeting HTML length: 326 characters
+📋 Meeting preview: <table width="100%" bgcolor="#d3d3d3"><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18076>...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18076>18076</A> AF  QZ     TTh    130-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      PANDYA,NIKHIL              Closed   40/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18076>18076</A> AF  QZ     TTh    130-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      PANDYA,NIKHIL              Closed   40/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18076, ID: AF, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 130-220, Building: CDH, Room: 101
+   Instructor: PANDYA,NIKHIL, Status: Closed
+   Enrollment: 40/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 9 ---
+📋 Meeting HTML length: 828 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18077>18077</A> B  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18077>18077</A> B  5       MWF    230-320    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  220      Taggart,Jenni              Open    226/ 240                      
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18077>18077</A> B  5       MWF    230-320    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  220      Taggart,Jenni              Open    226/ 240'
+🔍 Additional lines: ['TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18077, ID: B, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 230-320, Building: KNE, Room: 220
+   Instructor: Taggart,Jenni, Status: Open
+   Enrollment: 226/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 10 ---
+📋 Meeting HTML length: 828 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18078>18078</A> BA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18078>18078</A> BA  QZ     TTh    1230-120   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      Brown,Madeline E.          Open     38/  40                      
+                        FIRST YR INTEREST GRP STUDENTS ONLY                                                                                                                 
+                        QUESTIONS? VISIT                                                                                                                                    
+                        FYP.WASHINGTON.EDU/EXTRASEATS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18078>18078</A> BA  QZ     TTh    1230-120   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      Brown,Madeline E.          Open     38/  40'
+🔍 Additional lines: ['FIRST YR INTEREST GRP STUDENTS ONLY', 'QUESTIONS? VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18078, ID: BA, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1230-120, Building: CDH, Room: 105
+   Instructor: Brown,Madeline E., Status: Open
+   Enrollment: 38/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: FIRST YR INTEREST GRP STUDENTS ONLY QUESTIONS? VISIT FYP.WASHINGTON.EDU/EXTRASEATS
+   Total meetings created for this section: 1
+
+--- Meeting 11 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18079>18079</A> BB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18079>18079</A> BB  QZ     TTh    130-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      PANDYA,NIKHIL              Open     38/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18079>18079</A> BB  QZ     TTh    130-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      PANDYA,NIKHIL              Open     38/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18079, ID: BB, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 130-220, Building: CDH, Room: 105
+   Instructor: PANDYA,NIKHIL, Status: Open
+   Enrollment: 38/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 12 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18080>18080</A> BC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18080>18080</A> BC  QZ     TTh    230-320    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      PANDYA,NIKHIL              Open     39/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18080>18080</A> BC  QZ     TTh    230-320    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      PANDYA,NIKHIL              Open     39/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18080, ID: BC, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 230-320, Building: CDH, Room: 105
+   Instructor: PANDYA,NIKHIL, Status: Open
+   Enrollment: 39/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 13 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18081>18081</A> BD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18081>18081</A> BD  QZ     TTh    330-420    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      PANDYA,NIKHIL              Open     39/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18081>18081</A> BD  QZ     TTh    330-420    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  105      PANDYA,NIKHIL              Open     39/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18081, ID: BD, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 330-420, Building: CDH, Room: 105
+   Instructor: PANDYA,NIKHIL, Status: Open
+   Enrollment: 39/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 14 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18082>18082</A> BE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18082>18082</A> BE  QZ     TTh    230-320    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      PANDYA,NIKHIL              Open     38/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18082>18082</A> BE  QZ     TTh    230-320    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      PANDYA,NIKHIL              Open     38/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18082, ID: BE, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 230-320, Building: CDH, Room: 101
+   Instructor: PANDYA,NIKHIL, Status: Open
+   Enrollment: 38/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 15 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18083>18083</A> BF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18083>18083</A> BF  QZ     TTh    330-420    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      PANDYA,NIKHIL              Open     34/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18083>18083</A> BF  QZ     TTh    330-420    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  101      PANDYA,NIKHIL              Open     34/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18083, ID: BF, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 330-420, Building: CDH, Room: 101
+   Instructor: PANDYA,NIKHIL, Status: Open
+   Enrollment: 34/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+✅ Meeting parsing complete:
+   Found 14 valid meetings
+============================================================
+✅ Found 14 meetings
+📋 Creating Course object...
+✅ Course created: MATH  111 with 14 meetings
+
+--- Processing Course Block 4/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 315 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math112>MATH&nbsp;&nbsp; 112 </A>&nbsp;<A HREF=/students/crscat/math.html#math112>BUSINESS &ECON CALC </A></b></td><td width="15%"...
+📚 Course Code: 'MATH  112'
+📖 Title: 'BUSINESS &ECON CALC'
+📋 Prerequisites: '(cancellation in effect)'
+ℹ️  No credits found
+🏷️  Credit Types: 'NSc,RSN'
+✅ Header parsing complete:
+   Result: {'code': 'MATH  112', 'title': 'BUSINESS &ECON CALC', 'prerequisites': '(cancellation in effect)', 'credits': '', 'credit_types': 'NSc,RSN'}
+============================================================
+✅ Header parsed: MATH  112
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  112
+📅 Quarter: AUT 2023
+🔍 Found 2 meeting tables
+
+--- Meeting 1 ---
+📋 Meeting HTML length: 315 characters
+📋 Meeting preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math112>MATH&nbsp;&nbsp; 112 </A>&nbsp;<A HREF=/students/crscat/math.html#math11...
+❌ No <pre> tag found in meeting
+
+--- Meeting 2 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18084>18084</A> A  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18084>18084</A> A  5       MWF    830-950    <A HREF=/students/maps/map.cgi?MOR>MOR</A>  221      LYMAN,CURTISS FRANK        Open     35/  40'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18084>18084</A> A  5       MWF    830-950    <A HREF=/students/maps/map.cgi?MOR>MOR</A>  221      LYMAN,CURTISS FRANK        Open     35/  40'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18084, ID: A, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 830-950, Building: MOR, Room: 221
+   Instructor: LYMAN,CURTISS FRANK, Status: Open
+   Enrollment: 35/40, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+✅ Meeting parsing complete:
+   Found 1 valid meetings
+============================================================
+✅ Found 1 meetings
+📋 Creating Course object...
+✅ Course created: MATH  112 with 1 meetings
+
+--- Processing Course Block 5/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 281 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math116>MATH&nbsp;&nbsp; 116 </A>&nbsp;<A HREF=/students/crscat/math.html#math116>INTRO TAYLOR SERIES </A></b></td><td width="15%"...
+📚 Course Code: 'MATH  116'
+📖 Title: 'INTRO TAYLOR SERIES'
+ℹ️  No prerequisites found
+ℹ️  No credits found
+ℹ️  No credit types found
+✅ Header parsing complete:
+   Result: {'code': 'MATH  116', 'title': 'INTRO TAYLOR SERIES', 'prerequisites': '', 'credits': '', 'credit_types': ''}
+============================================================
+✅ Header parsed: MATH  116
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  116
+📅 Quarter: AUT 2023
+🔍 Found 2 meeting tables
+
+--- Meeting 1 ---
+📋 Meeting HTML length: 281 characters
+📋 Meeting preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math116>MATH&nbsp;&nbsp; 116 </A>&nbsp;<A HREF=/students/crscat/math.html#math11...
+❌ No <pre> tag found in meeting
+
+--- Meeting 2 ---
+📋 Meeting HTML length: 1135 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+      ><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=23241>23241</A> A  1   ...
+📝 Meeting text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=23241>23241</A> A  1       to be arranged    *    *        Su,Zhixu                             8/  15E CR/NC         %A    
+                        ENROLLMENT OPEN ONLY TO THOSE                                                                                                                       
+                        APPROVED THROUGH MATH TRANSFER                                                                                                                      
+                        EQUIVALENCY REVIEW PROCESS.                                                                                                                         
+                        EMAIL ADVISING@MATH.WASHINGTON.EDU                                                                                                                  
+                        WITH QUESTIONS.'
+🔍 Main line: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=23241>23241</A> A  1       to be arranged    *    *        Su,Zhixu                             8/  15E CR/NC         %A'
+🔍 Additional lines: ['ENROLLMENT OPEN ONLY TO THOSE', 'APPROVED THROUGH MATH TRANSFER', 'EQUIVALENCY REVIEW PROCESS.', 'EMAIL ADVISING@MATH.WASHINGTON.EDU', 'WITH QUESTIONS.']
+❌ Could not parse meeting data
+   Raw text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=23241>23241</A> A  1       to be arranged    *    *        Su,Zhixu                             8/  15E CR/NC         %A    
+                        ENROLLMENT OPEN ONLY TO THOSE                                                                                                                       
+                        APPROVED THROUGH MATH TRANSFER                                                                                                                      
+                        EQUIVALENCY REVIEW PROCESS.                                                                                                                         
+                        EMAIL ADVISING@MATH.WASHINGTON.EDU                                                                                                                  
+                        WITH QUESTIONS.'
+
+✅ Meeting parsing complete:
+   Found 0 valid meetings
+============================================================
+✅ Found 0 meetings
+📋 Creating Course object...
+✅ Course created: MATH  116 with 0 meetings
+
+--- Processing Course Block 6/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 261 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math120>MATH&nbsp;&nbsp; 120 </A>&nbsp;<A HREF=/students/crscat/math.html#math120>PRECALCULUS</A></b></td><td width="15%"><b>(NSc,...
+📚 Course Code: 'MATH  120'
+📖 Title: 'PRECALCULUS'
+ℹ️  No prerequisites found
+ℹ️  No credits found
+🏷️  Credit Types: 'NSc,RSN'
+✅ Header parsing complete:
+   Result: {'code': 'MATH  120', 'title': 'PRECALCULUS', 'prerequisites': '', 'credits': '', 'credit_types': 'NSc,RSN'}
+============================================================
+✅ Header parsed: MATH  120
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  120
+📅 Quarter: AUT 2023
+🔍 Found 19 meeting tables
+
+--- Meeting 1 ---
+📋 Meeting HTML length: 261 characters
+📋 Meeting preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math120>MATH&nbsp;&nbsp; 120 </A>&nbsp;<A HREF=/students/crscat/math.html#math12...
+❌ No <pre> tag found in meeting
+
+--- Meeting 2 ---
+📋 Meeting HTML length: 828 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18085>18085</A> A  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18085>18085</A> A  5       MWF    1130-1220  <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Pezzoli,Elena              Open    196/ 240                      
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18085>18085</A> A  5       MWF    1130-1220  <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Pezzoli,Elena              Open    196/ 240'
+🔍 Additional lines: ['TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18085, ID: A, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 1130-1220, Building: KNE, Room: 210
+   Instructor: Pezzoli,Elena, Status: Open
+   Enrollment: 196/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 3 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18086>18086</A> AA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18086>18086</A> AA  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125      O'Brien,Grace              Open     22/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18086>18086</A> AA  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125      O'Brien,Grace              Open     22/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18086, ID: AA, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 830-920, Building: CDH, Room: 125
+   Instructor: O'Brien,Grace, Status: Open
+   Enrollment: 22/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 4 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18087>18087</A> AB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18087>18087</A> AB  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125      O'Brien,Grace              Open     28/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18087>18087</A> AB  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125      O'Brien,Grace              Open     28/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18087, ID: AB, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 930-1020, Building: CDH, Room: 125
+   Instructor: O'Brien,Grace, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 5 ---
+📋 Meeting HTML length: 828 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18088>18088</A> AC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18088>18088</A> AC  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?THO>THO</A>  134      Li,Zhengkai                Open     24/  30                      
+                        FIRST YEAR INTEREST GROUP STUDENTS                                                                                                                  
+                        QUESTIONS? VISIT                                                                                                                                    
+                        FYP.WASHINGTON.EDU/EXTRASEATS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18088>18088</A> AC  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?THO>THO</A>  134      Li,Zhengkai                Open     24/  30'
+🔍 Additional lines: ['FIRST YEAR INTEREST GROUP STUDENTS', 'QUESTIONS? VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18088, ID: AC, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 830-920, Building: THO, Room: 134
+   Instructor: Li,Zhengkai, Status: Open
+   Enrollment: 24/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: FIRST YEAR INTEREST GROUP STUDENTS QUESTIONS? VISIT FYP.WASHINGTON.EDU/EXTRASEATS
+   Total meetings created for this section: 1
+
+--- Meeting 6 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18089>18089</A> AD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18089>18089</A> AD  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?THO>THO</A>  134      Li,Zhengkai                Open     26/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18089>18089</A> AD  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?THO>THO</A>  134      Li,Zhengkai                Open     26/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18089, ID: AD, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 930-1020, Building: THO, Room: 134
+   Instructor: Li,Zhengkai, Status: Open
+   Enrollment: 26/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 7 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18090>18090</A> AE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18090>18090</A> AE  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Magland,Charlie            Open     21/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18090>18090</A> AE  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Magland,Charlie            Open     21/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18090, ID: AE, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 830-920, Building: THO, Room: 325
+   Instructor: Magland,Charlie, Status: Open
+   Enrollment: 21/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 8 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18091>18091</A> AF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18091>18091</A> AF  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Magland,Charlie            Open     27/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18091>18091</A> AF  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Magland,Charlie            Open     27/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18091, ID: AF, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 930-1020, Building: THO, Room: 325
+   Instructor: Magland,Charlie, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 9 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+       <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18092>18092</A> AG  QZ ...
+📝 Meeting text: '<A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18092>18092</A> AG  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Cordero,Mont               Open     25/  30'
+🔍 Main line: '<A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18092>18092</A> AG  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Cordero,Mont               Open     25/  30'
+🔍 Additional lines: []
+❌ Could not parse meeting data
+   Raw text: '<A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18092>18092</A> AG  QZ     TTh    830-920    <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Cordero,Mont               Open     25/  30'
+
+--- Meeting 10 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+       <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18093>18093</A> AH  QZ ...
+📝 Meeting text: '<A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18093>18093</A> AH  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Cordero,Mont               Open     23/  30'
+🔍 Main line: '<A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18093>18093</A> AH  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Cordero,Mont               Open     23/  30'
+🔍 Additional lines: []
+❌ Could not parse meeting data
+   Raw text: '<A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18093>18093</A> AH  QZ     TTh    930-1020   <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Cordero,Mont               Open     23/  30'
+
+--- Meeting 11 ---
+📋 Meeting HTML length: 828 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18103>18103</A> B  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18103>18103</A> B  5       MWF    1230-120   <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Pezzoli,Elena              Open    160/ 180                      
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18103>18103</A> B  5       MWF    1230-120   <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Pezzoli,Elena              Open    160/ 180'
+🔍 Additional lines: ['TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18103, ID: B, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 1230-120, Building: KNE, Room: 210
+   Instructor: Pezzoli,Elena, Status: Open
+   Enrollment: 160/180, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 12 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18104>18104</A> BA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18104>18104</A> BA  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Nowak,Lauren               Open     26/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18104>18104</A> BA  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Nowak,Lauren               Open     26/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18104, ID: BA, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1030-1120, Building: THO, Room: 325
+   Instructor: Nowak,Lauren, Status: Open
+   Enrollment: 26/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 13 ---
+📋 Meeting HTML length: 828 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18105>18105</A> BB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18105>18105</A> BB  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Nowak,Lauren               Open     29/  30                      
+                        FIRST-YEAR INTEREST GROUPS (FIGS)                                                                                                                   
+                        ONLY, QUESTIONS VISIT                                                                                                                               
+                        FYP.WASHINGTON.EDU/EXTRASEATS.'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18105>18105</A> BB  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?THO>THO</A>  325      Nowak,Lauren               Open     29/  30'
+🔍 Additional lines: ['FIRST-YEAR INTEREST GROUPS (FIGS)', 'ONLY, QUESTIONS VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS.']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18105, ID: BB, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1130-1220, Building: THO, Room: 325
+   Instructor: Nowak,Lauren, Status: Open
+   Enrollment: 29/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.
+   Total meetings created for this section: 1
+
+--- Meeting 14 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18106>18106</A> BC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18106>18106</A> BC  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Hinman,Joshua              Open     28/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18106>18106</A> BC  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Hinman,Joshua              Open     28/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18106, ID: BC, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1030-1120, Building: SIG, Room: 227
+   Instructor: Hinman,Joshua, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 15 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18107>18107</A> BD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18107>18107</A> BD  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Hinman,Joshua              Open     24/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18107>18107</A> BD  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?SIG>SIG</A>  227      Hinman,Joshua              Open     24/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18107, ID: BD, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1130-1220, Building: SIG, Room: 227
+   Instructor: Hinman,Joshua, Status: Open
+   Enrollment: 24/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 16 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18108>18108</A> BE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18108>18108</A> BE  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?THO>THO</A>  134      CONNELLY,ERIN              Open     25/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18108>18108</A> BE  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?THO>THO</A>  134      CONNELLY,ERIN              Open     25/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18108, ID: BE, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1030-1120, Building: THO, Room: 134
+   Instructor: CONNELLY,ERIN, Status: Open
+   Enrollment: 25/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 17 ---
+📋 Meeting HTML length: 309 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18109>18109</A> BF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18109>18109</A> BF  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?THO>THO</A>  134      CONNELLY,ERIN              Open     28/  30'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18109>18109</A> BF  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?THO>THO</A>  134      CONNELLY,ERIN              Open     28/  30'
+🔍 Additional lines: []
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18109, ID: BF, Credits: 
+   Meeting Type Code: QZ, Date: TTh
+   Time: 1130-1220, Building: THO, Room: 134
+   Instructor: CONNELLY,ERIN, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Total meetings created for this section: 1
+
+--- Meeting 18 ---
+📋 Meeting HTML length: 482 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+      ><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18110>18110</A> BG  QZ ...
+📝 Meeting text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18110>18110</A> BG  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125                                           0/  30                      
+                        NOT AVAILABLE FOR REGISTRATION'
+🔍 Main line: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18110>18110</A> BG  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125                                           0/  30'
+🔍 Additional lines: ['NOT AVAILABLE FOR REGISTRATION']
+❌ Could not parse meeting data
+   Raw text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18110>18110</A> BG  QZ     TTh    1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125                                           0/  30                      
+                        NOT AVAILABLE FOR REGISTRATION'
+
+--- Meeting 19 ---
+📋 Meeting HTML length: 482 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+      ><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18111>18111</A> BH  QZ ...
+📝 Meeting text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18111>18111</A> BH  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125                                           0/  30                      
+                        NOT AVAILABLE FOR REGISTRATION'
+🔍 Main line: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18111>18111</A> BH  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125                                           0/  30'
+🔍 Additional lines: ['NOT AVAILABLE FOR REGISTRATION']
+❌ Could not parse meeting data
+   Raw text: '><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18111>18111</A> BH  QZ     TTh    1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  125                                           0/  30                      
+                        NOT AVAILABLE FOR REGISTRATION'
+
+✅ Meeting parsing complete:
+   Found 14 valid meetings
+============================================================
+✅ Found 14 meetings
+📋 Creating Course object...
+✅ Course created: MATH  120 with 14 meetings
+
+--- Processing Course Block 7/57 ---
+📋 Parsing course header...
+============================================================
+PARSING COURSE HEADER
+============================================================
+📋 Found course header table:
+   Length: 268 characters
+   Preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math124>MATH&nbsp;&nbsp; 124 </A>&nbsp;<A HREF=/students/crscat/math.html#math124>CALC ANALYT GEOM I</A></b></td><td width="15%"><...
+📚 Course Code: 'MATH  124'
+📖 Title: 'CALC ANALYT GEOM I'
+ℹ️  No prerequisites found
+ℹ️  No credits found
+🏷️  Credit Types: 'NSc,RSN'
+✅ Header parsing complete:
+   Result: {'code': 'MATH  124', 'title': 'CALC ANALYT GEOM I', 'prerequisites': '', 'credits': '', 'credit_types': 'NSc,RSN'}
+============================================================
+✅ Header parsed: MATH  124
+📋 Parsing course meetings...
+============================================================
+PARSING COURSE MEETINGS
+============================================================
+📚 Course: MATH  124
+📅 Quarter: AUT 2023
+🔍 Found 60 meeting tables
+
+--- Meeting 1 ---
+📋 Meeting HTML length: 268 characters
+📋 Meeting preview: <table bgcolor="#ffcccc" width="100%">
+<tr><td width="50%"><b><A NAME=math124>MATH&nbsp;&nbsp; 124 </A>&nbsp;<A HREF=/students/crscat/math.html#math12...
+❌ No <pre> tag found in meeting
+
+--- Meeting 2 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18141>18141</A> A  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18141>18141</A> A  5       MWF    830-920    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  220      Dos Reis,Fanny             Open    197/ 240                      
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18141>18141</A> A  5       MWF    830-920    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  220      Dos Reis,Fanny             Open    197/ 240'
+🔍 Additional lines: ['MATH 124 CANNOT BE OVERLOADED', 'TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18141, ID: A, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 830-920, Building: KNE, Room: 220
+   Instructor: Dos Reis,Fanny, Status: Open
+   Enrollment: 197/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 3 ---
+📋 Meeting HTML length: 589 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18142>18142</A> AA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18142>18142</A> AA  QZ     T      830-950    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Helms,Paige                Open     17/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Helms,Paige
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18142>18142</A> AA  QZ     T      830-950    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Helms,Paige                Open     17/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Helms,Paige', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18142, ID: AA, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: CDH, Room: 128
+   Instructor: Helms,Paige, Status: Open
+   Enrollment: 17/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 830-920 LOW 217 Helms,Paige
+   Total meetings created for this section: 2
+
+--- Meeting 4 ---
+📋 Meeting HTML length: 588 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18143>18143</A> AB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18143>18143</A> AB  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Chow,Dylon                 Open     25/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Chow,Dylon
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18143>18143</A> AB  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Chow,Dylon                 Open     25/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Chow,Dylon', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18143, ID: AB, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: CDH, Room: 128
+   Instructor: Chow,Dylon, Status: Open
+   Enrollment: 25/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 930-1020 LOW 217 Chow,Dylon
+   Total meetings created for this section: 2
+
+--- Meeting 5 ---
+📋 Meeting HTML length: 587 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18144>18144</A> AC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18144>18144</A> AC  QZ     T      830-950    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Zhang,Leo                  Open     25/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Zhang,Leo
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18144>18144</A> AC  QZ     T      830-950    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Zhang,Leo                  Open     25/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Zhang,Leo', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18144, ID: AC, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: GLD, Room: 436
+   Instructor: Zhang,Leo, Status: Open
+   Enrollment: 25/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 830-920 LOW 219 Zhang,Leo
+   Total meetings created for this section: 2
+
+--- Meeting 6 ---
+📋 Meeting HTML length: 587 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18145>18145</A> AD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18145>18145</A> AD  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Zhang,Leo                  Open     24/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Zhang,Leo
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18145>18145</A> AD  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Zhang,Leo                  Open     24/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Zhang,Leo', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18145, ID: AD, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: GLD, Room: 436
+   Instructor: Zhang,Leo, Status: Open
+   Enrollment: 24/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 930-1020 LOW 219 Zhang,Leo
+   Total meetings created for this section: 2
+
+--- Meeting 7 ---
+📋 Meeting HTML length: 589 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18146>18146</A> AE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18146>18146</A> AE  QZ     T      830-950    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Vaes,Wietse                Open     27/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Vaes,Wietse
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18146>18146</A> AE  QZ     T      830-950    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Vaes,Wietse                Open     27/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Vaes,Wietse', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18146, ID: AE, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: BNS, Room: 115
+   Instructor: Vaes,Wietse, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 830-920 BLD 392 Vaes,Wietse
+   Total meetings created for this section: 2
+
+--- Meeting 8 ---
+📋 Meeting HTML length: 589 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18147>18147</A> AF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18147>18147</A> AF  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Vaes,Wietse                Open     28/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Vaes,Wietse
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18147>18147</A> AF  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Vaes,Wietse                Open     28/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Vaes,Wietse', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18147, ID: AF, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: BNS, Room: 115
+   Instructor: Vaes,Wietse, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 930-1020 BLD 392 Vaes,Wietse
+   Total meetings created for this section: 2
+
+--- Meeting 9 ---
+📋 Meeting HTML length: 587 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18148>18148</A> AG  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18148>18148</A> AG  QZ     T      830-950    <A HREF=/students/maps/map.cgi?MGH>MGH</A>  254      Gong,Ting                  Open     25/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?SIG>SIG</A>  225      Gong,Ting
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18148>18148</A> AG  QZ     T      830-950    <A HREF=/students/maps/map.cgi?MGH>MGH</A>  254      Gong,Ting                  Open     25/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?SIG>SIG</A>  225      Gong,Ting', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18148, ID: AG, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: MGH, Room: 254
+   Instructor: Gong,Ting, Status: Open
+   Enrollment: 25/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 830-920 SIG 225 Gong,Ting
+   Total meetings created for this section: 2
+
+--- Meeting 10 ---
+📋 Meeting HTML length: 587 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18149>18149</A> AH  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18149>18149</A> AH  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?MGH>MGH</A>  254      Gong,Ting                  Open     26/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?SIG>SIG</A>  230      Gong,Ting
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18149>18149</A> AH  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?MGH>MGH</A>  254      Gong,Ting                  Open     26/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?SIG>SIG</A>  230      Gong,Ting', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18149, ID: AH, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: MGH, Room: 254
+   Instructor: Gong,Ting, Status: Open
+   Enrollment: 26/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 930-1020 SIG 230 Gong,Ting
+   Total meetings created for this section: 2
+
+--- Meeting 11 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18150>18150</A> B  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18150>18150</A> B  5       MWF    930-1020   <A HREF=/students/maps/map.cgi?KNE>KNE</A>  220      Camacho,Charles Anthony    Open    219/ 240                      
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18150>18150</A> B  5       MWF    930-1020   <A HREF=/students/maps/map.cgi?KNE>KNE</A>  220      Camacho,Charles Anthony    Open    219/ 240'
+🔍 Additional lines: ['MATH 124 CANNOT BE OVERLOADED', 'TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18150, ID: B, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 930-1020, Building: KNE, Room: 220
+   Instructor: Camacho,Charles Anthony, Status: Open
+   Enrollment: 219/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 12 ---
+📋 Meeting HTML length: 1113 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18151>18151</A> BA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18151>18151</A> BA  QZ     T      830-950    <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Rostamloo,Daniel           Open     27/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Rostamloo,Daniel
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        FIRST YEAR INTEREST GROUP STUDENTS                                                                                                                  
+                        ONLY. QUESTIONS? VISIT                                                                                                                              
+                        FYP.WASHINGTON.EDU/EXTRASEATS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18151>18151</A> BA  QZ     T      830-950    <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Rostamloo,Daniel           Open     27/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Rostamloo,Daniel', 'MATH 124 CANNOT BE OVERLOADED', 'FIRST YEAR INTEREST GROUP STUDENTS', 'ONLY. QUESTIONS? VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18151, ID: BA, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: MAR, Room: 168
+   Instructor: Rostamloo,Daniel, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED FIRST YEAR INTEREST GROUP STUDENTS ONLY. QUESTIONS? VISIT FYP.WASHINGTON.EDU/EXTRASEATS
+   Created 1 additional meeting objects:
+     1. Th 830-920 THO 211 Rostamloo,Daniel
+   Total meetings created for this section: 2
+
+--- Meeting 13 ---
+📋 Meeting HTML length: 594 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18152>18152</A> BB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18152>18152</A> BB  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Rostamloo,Daniel           Open     27/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Rostamloo,Daniel
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18152>18152</A> BB  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Rostamloo,Daniel           Open     27/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Rostamloo,Daniel', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18152, ID: BB, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: MAR, Room: 168
+   Instructor: Rostamloo,Daniel, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 930-1020 THO 211 Rostamloo,Daniel
+   Total meetings created for this section: 2
+
+--- Meeting 14 ---
+📋 Meeting HTML length: 597 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18153>18153</A> BC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18153>18153</A> BC  QZ     T      830-950    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Batakci,Levent Adil        Open     27/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?SIG>SIG</A>  224      Batakci,Levent Adil
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18153>18153</A> BC  QZ     T      830-950    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Batakci,Levent Adil        Open     27/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?SIG>SIG</A>  224      Batakci,Levent Adil', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18153, ID: BC, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: BLD, Room: 286
+   Instructor: Batakci,Levent Adil, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 830-920 SIG 224 Batakci,Levent Adil
+   Total meetings created for this section: 2
+
+--- Meeting 15 ---
+📋 Meeting HTML length: 597 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18154>18154</A> BD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18154>18154</A> BD  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Batakci,Levent Adil        Open     27/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?SIG>SIG</A>  226      Batakci,Levent Adil
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18154>18154</A> BD  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Batakci,Levent Adil        Open     27/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?SIG>SIG</A>  226      Batakci,Levent Adil', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18154, ID: BD, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: BLD, Room: 286
+   Instructor: Batakci,Levent Adil, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 930-1020 SIG 226 Batakci,Levent Adil
+   Total meetings created for this section: 2
+
+--- Meeting 16 ---
+📋 Meeting HTML length: 596 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18155>18155</A> BE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18155>18155</A> BE  QZ     T      830-950    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Abi Younes,Charbel         Open     27/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Abi Younes,Charbel
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18155>18155</A> BE  QZ     T      830-950    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Abi Younes,Charbel         Open     27/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Abi Younes,Charbel', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18155, ID: BE, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: BLD, Room: 392
+   Instructor: Abi Younes,Charbel, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 830-920 MAR 168 Abi Younes,Charbel
+   Total meetings created for this section: 2
+
+--- Meeting 17 ---
+📋 Meeting HTML length: 596 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18156>18156</A> BF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18156>18156</A> BF  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Abi Younes,Charbel         Open     27/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Abi Younes,Charbel
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18156>18156</A> BF  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Abi Younes,Charbel         Open     27/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Abi Younes,Charbel', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18156, ID: BF, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: BLD, Room: 392
+   Instructor: Abi Younes,Charbel, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 930-1020 MAR 168 Abi Younes,Charbel
+   Total meetings created for this section: 2
+
+--- Meeting 18 ---
+📋 Meeting HTML length: 590 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18157>18157</A> BG  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18157>18157</A> BG  QZ     T      830-950    <A HREF=/students/maps/map.cgi?CMU>CMU</A>  228      RIVERO,JORGE               Open     29/  30                      
+                        Th     830-920    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      RIVERO,JORGE
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18157>18157</A> BG  QZ     T      830-950    <A HREF=/students/maps/map.cgi?CMU>CMU</A>  228      RIVERO,JORGE               Open     29/  30'
+🔍 Additional lines: ['Th     830-920    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      RIVERO,JORGE', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18157, ID: BG, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 830-950, Building: CMU, Room: 228
+   Instructor: RIVERO,JORGE, Status: Open
+   Enrollment: 29/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 830-920 BLD 286 RIVERO,JORGE
+   Total meetings created for this section: 2
+
+--- Meeting 19 ---
+📋 Meeting HTML length: 590 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18158>18158</A> BH  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18158>18158</A> BH  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?CMU>CMU</A>  228      RIVERO,JORGE               Open     28/  30                      
+                        Th     930-1020   <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      RIVERO,JORGE
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18158>18158</A> BH  QZ     T      1000-1120  <A HREF=/students/maps/map.cgi?CMU>CMU</A>  228      RIVERO,JORGE               Open     28/  30'
+🔍 Additional lines: ['Th     930-1020   <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      RIVERO,JORGE', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18158, ID: BH, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1000-1120, Building: CMU, Room: 228
+   Instructor: RIVERO,JORGE, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 930-1020 BLD 286 RIVERO,JORGE
+   Total meetings created for this section: 2
+
+--- Meeting 20 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18159>18159</A> C  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18159>18159</A> C  5       MWF    1030-1120  <A HREF=/students/maps/map.cgi?SMI>SMI</A>  120      Camacho,Charles Anthony    Open    232/ 240                      
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18159>18159</A> C  5       MWF    1030-1120  <A HREF=/students/maps/map.cgi?SMI>SMI</A>  120      Camacho,Charles Anthony    Open    232/ 240'
+🔍 Additional lines: ['MATH 124 CANNOT BE OVERLOADED', 'TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18159, ID: C, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 1030-1120, Building: SMI, Room: 120
+   Instructor: Camacho,Charles Anthony, Status: Open
+   Enrollment: 232/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 21 ---
+📋 Meeting HTML length: 597 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18160>18160</A> CA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18160>18160</A> CA  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Howell,Payton Greta        Open     29/  30                      
+                        Th     1030-1120  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Howell,Payton Greta
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18160>18160</A> CA  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Howell,Payton Greta        Open     29/  30'
+🔍 Additional lines: ['Th     1030-1120  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Howell,Payton Greta', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18160, ID: CA, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: CDH, Room: 128
+   Instructor: Howell,Payton Greta, Status: Open
+   Enrollment: 29/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1030-1120 LOW 217 Howell,Payton Greta
+   Total meetings created for this section: 2
+
+--- Meeting 22 ---
+📋 Meeting HTML length: 1133 characters
+📋 Meeting preview: <table width="100%" bgcolor="#d3d3d3"><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18161>...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18161>18161</A> CB  QZ     T      100-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Howell,Payton Greta        Closed   30/  30                      
+                        Th     1130-1220  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Howell,Payton Greta
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        FIRST-YEAR INTEREST GROUPS (FIGS)                                                                                                                   
+                        ONLY, QUESTIONS VISIT                                                                                                                               
+                        FYP.WASHINGTON.EDU/EXTRASEATS.'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18161>18161</A> CB  QZ     T      100-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Howell,Payton Greta        Closed   30/  30'
+🔍 Additional lines: ['Th     1130-1220  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Howell,Payton Greta', 'MATH 124 CANNOT BE OVERLOADED', 'FIRST-YEAR INTEREST GROUPS (FIGS)', 'ONLY, QUESTIONS VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS.']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18161, ID: CB, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: CDH, Room: 128
+   Instructor: Howell,Payton Greta, Status: Closed
+   Enrollment: 30/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.
+   Created 1 additional meeting objects:
+     1. Th 1130-1220 LOW 217 Howell,Payton Greta
+   Total meetings created for this section: 2
+
+--- Meeting 23 ---
+📋 Meeting HTML length: 1111 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18162>18162</A> CC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18162>18162</A> CC  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Galarraga,Alex             Open     29/  30                      
+                        Th     1030-1120  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Galarraga,Alex
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        FIRST-YEAR INTEREST GROUPS (FIGS)                                                                                                                   
+                        ONLY, QUESTIONS VISIT                                                                                                                               
+                        FYP.WASHINGTON.EDU/EXTRASEATS.'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18162>18162</A> CC  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Galarraga,Alex             Open     29/  30'
+🔍 Additional lines: ['Th     1030-1120  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Galarraga,Alex', 'MATH 124 CANNOT BE OVERLOADED', 'FIRST-YEAR INTEREST GROUPS (FIGS)', 'ONLY, QUESTIONS VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS.']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18162, ID: CC, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: GLD, Room: 436
+   Instructor: Galarraga,Alex, Status: Open
+   Enrollment: 29/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.
+   Created 1 additional meeting objects:
+     1. Th 1030-1120 LOW 219 Galarraga,Alex
+   Total meetings created for this section: 2
+
+--- Meeting 24 ---
+📋 Meeting HTML length: 1111 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18163>18163</A> CD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18163>18163</A> CD  QZ     T      100-220    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Galarraga,Alex             Open     29/  30                      
+                        Th     1130-1220  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Galarraga,Alex
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        FIRST-YEAR INTEREST GROUP (FIG)                                                                                                                     
+                        STUDENTS ONLY. QUESTIONS, VISIT                                                                                                                     
+                        FYP.WASHINGTON.EDU/EXTRASEATS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18163>18163</A> CD  QZ     T      100-220    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Galarraga,Alex             Open     29/  30'
+🔍 Additional lines: ['Th     1130-1220  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Galarraga,Alex', 'MATH 124 CANNOT BE OVERLOADED', 'FIRST-YEAR INTEREST GROUP (FIG)', 'STUDENTS ONLY. QUESTIONS, VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18163, ID: CD, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: GLD, Room: 436
+   Instructor: Galarraga,Alex, Status: Open
+   Enrollment: 29/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUP (FIG) STUDENTS ONLY. QUESTIONS, VISIT FYP.WASHINGTON.EDU/EXTRASEATS
+   Created 1 additional meeting objects:
+     1. Th 1130-1220 LOW 219 Galarraga,Alex
+   Total meetings created for this section: 2
+
+--- Meeting 25 ---
+📋 Meeting HTML length: 1107 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18164>18164</A> CE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18164>18164</A> CE  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Le,Hai Van                 Open     28/  30                      
+                        Th     1030-1120  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Le,Hai Van
+                        CANNOT BE OVERLOADED                                                                                                                                
+                        FIRST-YEAR INTEREST GROUPS (FIGS)                                                                                                                   
+                        ONLY, QUESTIONS VISIT                                                                                                                               
+                        FYP.WASHINGTON.EDU/EXTRASEATS.'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18164>18164</A> CE  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Le,Hai Van                 Open     28/  30'
+🔍 Additional lines: ['Th     1030-1120  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Le,Hai Van', 'CANNOT BE OVERLOADED', 'FIRST-YEAR INTEREST GROUPS (FIGS)', 'ONLY, QUESTIONS VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS.']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18164, ID: CE, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: BNS, Room: 115
+   Instructor: Le,Hai Van, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED FIRST-YEAR INTEREST GROUPS (FIGS) ONLY, QUESTIONS VISIT FYP.WASHINGTON.EDU/EXTRASEATS.
+   Created 1 additional meeting objects:
+     1. Th 1030-1120 BLD 392 Le,Hai Van
+   Total meetings created for this section: 2
+
+--- Meeting 26 ---
+📋 Meeting HTML length: 605 characters
+📋 Meeting preview: <table width="100%" bgcolor="#d3d3d3"><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18165>...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18165>18165</A> CF  QZ     T      100-220    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Le,Hai Van                 Closed   30/  30                      
+                        Th     1130-1220  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Le,Hai Van
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18165>18165</A> CF  QZ     T      100-220    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Le,Hai Van                 Closed   30/  30'
+🔍 Additional lines: ['Th     1130-1220  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Le,Hai Van', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18165, ID: CF, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: BNS, Room: 115
+   Instructor: Le,Hai Van, Status: Closed
+   Enrollment: 30/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1130-1220 BLD 392 Le,Hai Van
+   Total meetings created for this section: 2
+
+--- Meeting 27 ---
+📋 Meeting HTML length: 596 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18166>18166</A> CG  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18166>18166</A> CG  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?DEN>DEN</A>  258      Litterell,Collin D         Open     29/  30                      
+                        Th     1030-1120  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  216      Litterell,Collin D
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18166>18166</A> CG  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?DEN>DEN</A>  258      Litterell,Collin D         Open     29/  30'
+🔍 Additional lines: ['Th     1030-1120  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  216      Litterell,Collin D', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18166, ID: CG, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: DEN, Room: 258
+   Instructor: Litterell,Collin D, Status: Open
+   Enrollment: 29/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 1030-1120 LOW 216 Litterell,Collin D
+   Total meetings created for this section: 2
+
+--- Meeting 28 ---
+📋 Meeting HTML length: 596 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18167>18167</A> CH  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18167>18167</A> CH  QZ     T      100-220    <A HREF=/students/maps/map.cgi?DEN>DEN</A>  212      Litterell,Collin D         Open     28/  30                      
+                        Th     1130-1220  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  216      Litterell,Collin D
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18167>18167</A> CH  QZ     T      100-220    <A HREF=/students/maps/map.cgi?DEN>DEN</A>  212      Litterell,Collin D         Open     28/  30'
+🔍 Additional lines: ['Th     1130-1220  <A HREF=/students/maps/map.cgi?LOW>LOW</A>  216      Litterell,Collin D', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18167, ID: CH, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: DEN, Room: 212
+   Instructor: Litterell,Collin D, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 1130-1220 LOW 216 Litterell,Collin D
+   Total meetings created for this section: 2
+
+--- Meeting 29 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18168>18168</A> D  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18168>18168</A> D  5       MWF    1130-1220  <A HREF=/students/maps/map.cgi?SMI>SMI</A>  120      Wilson,Bobby L.E.          Open    197/ 240                      
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18168>18168</A> D  5       MWF    1130-1220  <A HREF=/students/maps/map.cgi?SMI>SMI</A>  120      Wilson,Bobby L.E.          Open    197/ 240'
+🔍 Additional lines: ['MATH 124 CANNOT BE OVERLOADED', 'TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18168, ID: D, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 1130-1220, Building: SMI, Room: 120
+   Instructor: Wilson,Bobby L.E., Status: Open
+   Enrollment: 197/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 30 ---
+📋 Meeting HTML length: 587 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18169>18169</A> DA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18169>18169</A> DA  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Guyer,Dan                  Open     21/  30                      
+                        Th     1030-1120  <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Guyer,Dan
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18169>18169</A> DA  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Guyer,Dan                  Open     21/  30'
+🔍 Additional lines: ['Th     1030-1120  <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Guyer,Dan', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18169, ID: DA, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: MAR, Room: 168
+   Instructor: Guyer,Dan, Status: Open
+   Enrollment: 21/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1030-1120 THO 211 Guyer,Dan
+   Total meetings created for this section: 2
+
+--- Meeting 31 ---
+📋 Meeting HTML length: 587 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18170>18170</A> DB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18170>18170</A> DB  QZ     T      100-220    <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Guyer,Dan                  Open     26/  30                      
+                        Th     1130-1220  <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Guyer,Dan
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18170>18170</A> DB  QZ     T      100-220    <A HREF=/students/maps/map.cgi?MAR>MAR</A>  168      Guyer,Dan                  Open     26/  30'
+🔍 Additional lines: ['Th     1130-1220  <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Guyer,Dan', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18170, ID: DB, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: MAR, Room: 168
+   Instructor: Guyer,Dan, Status: Open
+   Enrollment: 26/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1130-1220 THO 211 Guyer,Dan
+   Total meetings created for this section: 2
+
+--- Meeting 32 ---
+📋 Meeting HTML length: 602 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18171>18171</A> DC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18171>18171</A> DC  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Kassabova,Dora Martinova   Open     26/  30                      
+                        Th     1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  110B     Kassabova,Dora Martinova
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18171>18171</A> DC  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Kassabova,Dora Martinova   Open     26/  30'
+🔍 Additional lines: ['Th     1030-1120  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  110B     Kassabova,Dora Martinova', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18171, ID: DC, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: BLD, Room: 286
+   Instructor: Kassabova,Dora Martinova, Status: Open
+   Enrollment: 26/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1030-1120 CDH 110B Kassabova,Dora Martinova
+   Total meetings created for this section: 2
+
+--- Meeting 33 ---
+📋 Meeting HTML length: 602 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18172>18172</A> DD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18172>18172</A> DD  QZ     T      100-220    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Kassabova,Dora Martinova   Open     24/  30                      
+                        Th     1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  110A     Kassabova,Dora Martinova
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18172>18172</A> DD  QZ     T      100-220    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  286      Kassabova,Dora Martinova   Open     24/  30'
+🔍 Additional lines: ['Th     1130-1220  <A HREF=/students/maps/map.cgi?CDH>CDH</A>  110A     Kassabova,Dora Martinova', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18172, ID: DD, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: BLD, Room: 286
+   Instructor: Kassabova,Dora Martinova, Status: Open
+   Enrollment: 24/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1130-1220 CDH 110A Kassabova,Dora Martinova
+   Total meetings created for this section: 2
+
+--- Meeting 34 ---
+📋 Meeting HTML length: 605 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18173>18173</A> DE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18173>18173</A> DE  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Nino-Cortes,Jonathan Andre Open     23/  30                      
+                        Th     1230-120   <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Nino-Cortes,Jonathan Andres
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18173>18173</A> DE  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Nino-Cortes,Jonathan Andre Open     23/  30'
+🔍 Additional lines: ['Th     1230-120   <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Nino-Cortes,Jonathan Andres', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18173, ID: DE, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: BLD, Room: 392
+   Instructor: Nino-Cortes,Jonathan Andre, Status: Open
+   Enrollment: 23/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1230-120 THO 211 Nino-Cortes,Jonathan Andres
+   Total meetings created for this section: 2
+
+--- Meeting 35 ---
+📋 Meeting HTML length: 605 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18174>18174</A> DF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18174>18174</A> DF  QZ     T      100-220    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Nino-Cortes,Jonathan Andre Open     27/  30                      
+                        Th     130-220    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Nino-Cortes,Jonathan Andres
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18174>18174</A> DF  QZ     T      100-220    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Nino-Cortes,Jonathan Andre Open     27/  30'
+🔍 Additional lines: ['Th     130-220    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Nino-Cortes,Jonathan Andres', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18174, ID: DF, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: BLD, Room: 392
+   Instructor: Nino-Cortes,Jonathan Andre, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 130-220 THO 211 Nino-Cortes,Jonathan Andres
+   Total meetings created for this section: 2
+
+--- Meeting 36 ---
+📋 Meeting HTML length: 417 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18175>18175</A> DG  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18175>18175</A> DG  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?MGH>MGH</A>  271      Zhang,Freda                Open     28/  30                      
+                        Th     1230-120   <A HREF=/students/maps/map.cgi?PCAR>PCAR</A> 297      Zhang,Freda'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18175>18175</A> DG  QZ     T      1130-1250  <A HREF=/students/maps/map.cgi?MGH>MGH</A>  271      Zhang,Freda                Open     28/  30'
+🔍 Additional lines: ['Th     1230-120   <A HREF=/students/maps/map.cgi?PCAR>PCAR</A> 297      Zhang,Freda']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18175, ID: DG, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 1130-1250, Building: MGH, Room: 271
+   Instructor: Zhang,Freda, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Created 1 additional meeting objects:
+     1. Th 1230-120 PCAR 297 Zhang,Freda
+   Total meetings created for this section: 2
+
+--- Meeting 37 ---
+📋 Meeting HTML length: 417 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18176>18176</A> DH  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18176>18176</A> DH  QZ     T      100-220    <A HREF=/students/maps/map.cgi?MGH>MGH</A>  271      Zhang,Freda                Open     22/  30                      
+                        Th     130-220    <A HREF=/students/maps/map.cgi?PCAR>PCAR</A> 297      Zhang,Freda'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18176>18176</A> DH  QZ     T      100-220    <A HREF=/students/maps/map.cgi?MGH>MGH</A>  271      Zhang,Freda                Open     22/  30'
+🔍 Additional lines: ['Th     130-220    <A HREF=/students/maps/map.cgi?PCAR>PCAR</A> 297      Zhang,Freda']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18176, ID: DH, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 100-220, Building: MGH, Room: 271
+   Instructor: Zhang,Freda, Status: Open
+   Enrollment: 22/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: 
+   Created 1 additional meeting objects:
+     1. Th 130-220 PCAR 297 Zhang,Freda
+   Total meetings created for this section: 2
+
+--- Meeting 38 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18177>18177</A> E  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18177>18177</A> E  5       MWF    230-320    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Nichifor,Alexandra         Open    212/ 240                      
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18177>18177</A> E  5       MWF    230-320    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Nichifor,Alexandra         Open    212/ 240'
+🔍 Additional lines: ['MATH 124 CANNOT BE OVERLOADED', 'TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18177, ID: E, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 230-320, Building: KNE, Room: 210
+   Instructor: Nichifor,Alexandra, Status: Open
+   Enrollment: 212/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 39 ---
+📋 Meeting HTML length: 600 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18178>18178</A> EA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18178>18178</A> EA  QZ     T      230-350    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Emamjomeh Zadeh,Maryam     Open     28/  30                      
+                        Th     1230-120   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Emamjomeh Zadeh,Maryam
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18178>18178</A> EA  QZ     T      230-350    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Emamjomeh Zadeh,Maryam     Open     28/  30'
+🔍 Additional lines: ['Th     1230-120   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Emamjomeh Zadeh,Maryam', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18178, ID: EA, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: BLD, Room: 392
+   Instructor: Emamjomeh Zadeh,Maryam, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1230-120 LOW 217 Emamjomeh Zadeh,Maryam
+   Total meetings created for this section: 2
+
+--- Meeting 40 ---
+📋 Meeting HTML length: 600 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18179>18179</A> EB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18179>18179</A> EB  QZ     T      400-520    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Emamjomeh Zadeh,Maryam     Open     24/  30                      
+                        Th     130-220    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Emamjomeh Zadeh,Maryam
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18179>18179</A> EB  QZ     T      400-520    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Emamjomeh Zadeh,Maryam     Open     24/  30'
+🔍 Additional lines: ['Th     130-220    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Emamjomeh Zadeh,Maryam', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18179, ID: EB, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: BLD, Room: 392
+   Instructor: Emamjomeh Zadeh,Maryam, Status: Open
+   Enrollment: 24/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 130-220 LOW 217 Emamjomeh Zadeh,Maryam
+   Total meetings created for this section: 2
+
+--- Meeting 41 ---
+📋 Meeting HTML length: 1109 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18180>18180</A> EC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18180>18180</A> EC  QZ     T      230-350    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  155      Bhatia,Dhruv               Open     24/  30                      
+                        Th     1230-120   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Bhatia,Dhruv
+                        FIRST YEAR INTEREST GROUP STUDENTS                                                                                                                  
+                        QUESTIONS? VISIT                                                                                                                                    
+                        FYP.WASHINGTON.EDU/EXTRASEATS                                                                                                                       
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18180>18180</A> EC  QZ     T      230-350    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  155      Bhatia,Dhruv               Open     24/  30'
+🔍 Additional lines: ['Th     1230-120   <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Bhatia,Dhruv', 'FIRST YEAR INTEREST GROUP STUDENTS', 'QUESTIONS? VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18180, ID: EC, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: SAV, Room: 155
+   Instructor: Bhatia,Dhruv, Status: Open
+   Enrollment: 24/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: FIRST YEAR INTEREST GROUP STUDENTS QUESTIONS? VISIT FYP.WASHINGTON.EDU/EXTRASEATS MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1230-120 LOW 219 Bhatia,Dhruv
+   Total meetings created for this section: 2
+
+--- Meeting 42 ---
+📋 Meeting HTML length: 1109 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18181>18181</A> ED  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18181>18181</A> ED  QZ     T      400-520    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  155      Bhatia,Dhruv               Open     27/  30                      
+                        Th     130-220    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Bhatia,Dhruv
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        FIRST YEAR INTEREST GRP STUDENTS ON                                                                                                                 
+                        QUESTIONS? VISIT                                                                                                                                    
+                        FYP.WASHINGTON.EDU/EXTRASEATS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18181>18181</A> ED  QZ     T      400-520    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  155      Bhatia,Dhruv               Open     27/  30'
+🔍 Additional lines: ['Th     130-220    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Bhatia,Dhruv', 'MATH 124 CANNOT BE OVERLOADED', 'FIRST YEAR INTEREST GRP STUDENTS ON', 'QUESTIONS? VISIT', 'FYP.WASHINGTON.EDU/EXTRASEATS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18181, ID: ED, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: SAV, Room: 155
+   Instructor: Bhatia,Dhruv, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED FIRST YEAR INTEREST GRP STUDENTS ON QUESTIONS? VISIT FYP.WASHINGTON.EDU/EXTRASEATS
+   Created 1 additional meeting objects:
+     1. Th 130-220 LOW 219 Bhatia,Dhruv
+   Total meetings created for this section: 2
+
+--- Meeting 43 ---
+📋 Meeting HTML length: 596 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18182>18182</A> EE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18182>18182</A> EE  QZ     T      230-350    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  024      Sethi-Olowin,Arjun         Open     28/  30                      
+                        Th     1230-120   <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Sethi-Olowin,Arjun
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18182>18182</A> EE  QZ     T      230-350    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  024      Sethi-Olowin,Arjun         Open     28/  30'
+🔍 Additional lines: ['Th     1230-120   <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Sethi-Olowin,Arjun', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18182, ID: EE, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: DEM, Room: 024
+   Instructor: Sethi-Olowin,Arjun, Status: Open
+   Enrollment: 28/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 1230-120 BLD 392 Sethi-Olowin,Arjun
+   Total meetings created for this section: 2
+
+--- Meeting 44 ---
+📋 Meeting HTML length: 596 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18183>18183</A> EF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18183>18183</A> EF  QZ     T      400-520    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  024      Sethi-Olowin,Arjun         Open     27/  30                      
+                        Th     130-220    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Sethi-Olowin,Arjun
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18183>18183</A> EF  QZ     T      400-520    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  024      Sethi-Olowin,Arjun         Open     27/  30'
+🔍 Additional lines: ['Th     130-220    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Sethi-Olowin,Arjun', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18183, ID: EF, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: DEM, Room: 024
+   Instructor: Sethi-Olowin,Arjun, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 130-220 BLD 392 Sethi-Olowin,Arjun
+   Total meetings created for this section: 2
+
+--- Meeting 45 ---
+📋 Meeting HTML length: 602 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18184>18184</A> EG  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18184>18184</A> EG  QZ     T      230-350    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Grisales Gomez,Luz Elena   Open     29/  30                      
+                        Th     1230-120   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  139      Grisales Gomez,Luz Elena
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18184>18184</A> EG  QZ     T      230-350    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Grisales Gomez,Luz Elena   Open     29/  30'
+🔍 Additional lines: ['Th     1230-120   <A HREF=/students/maps/map.cgi?CDH>CDH</A>  139      Grisales Gomez,Luz Elena', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18184, ID: EG, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: THO, Room: 211
+   Instructor: Grisales Gomez,Luz Elena, Status: Open
+   Enrollment: 29/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 1230-120 CDH 139 Grisales Gomez,Luz Elena
+   Total meetings created for this section: 2
+
+--- Meeting 46 ---
+📋 Meeting HTML length: 602 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18185>18185</A> EH  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18185>18185</A> EH  QZ     T      400-520    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Grisales Gomez,Luz Elena   Open     25/  30                      
+                        Th     130-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  139      Grisales Gomez,Luz Elena
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18185>18185</A> EH  QZ     T      400-520    <A HREF=/students/maps/map.cgi?THO>THO</A>  211      Grisales Gomez,Luz Elena   Open     25/  30'
+🔍 Additional lines: ['Th     130-220    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  139      Grisales Gomez,Luz Elena', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18185, ID: EH, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: THO, Room: 211
+   Instructor: Grisales Gomez,Luz Elena, Status: Open
+   Enrollment: 25/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 130-220 CDH 139 Grisales Gomez,Luz Elena
+   Total meetings created for this section: 2
+
+--- Meeting 47 ---
+📋 Meeting HTML length: 1001 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18186>18186</A> F  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18186>18186</A> F  5       MWF    330-420    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Nichifor,Alexandra         Open    194/ 240                      
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18186>18186</A> F  5       MWF    330-420    <A HREF=/students/maps/map.cgi?KNE>KNE</A>  210      Nichifor,Alexandra         Open    194/ 240'
+🔍 Additional lines: ['MATH 124 CANNOT BE OVERLOADED', 'TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18186, ID: F, Credits: 5
+   Meeting Type Code: , Date: MWF
+   Time: 330-420, Building: KNE, Room: 210
+   Instructor: Nichifor,Alexandra, Status: Open
+   Enrollment: 194/240, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED TAKE GUIDED SELF-PLACEMENT BEFORE REGISTERING FOR COURSE HTTPS://TINYURL.COM/UWMATHGSP
+   Total meetings created for this section: 1
+
+--- Meeting 48 ---
+📋 Meeting HTML length: 588 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18187>18187</A> FA  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18187>18187</A> FA  QZ     T      230-350    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Chow,Dylon                 Open     26/  30                      
+                        Th     230-320    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Chow,Dylon
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18187>18187</A> FA  QZ     T      230-350    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Chow,Dylon                 Open     26/  30'
+🔍 Additional lines: ['Th     230-320    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Chow,Dylon', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18187, ID: FA, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: CDH, Room: 128
+   Instructor: Chow,Dylon, Status: Open
+   Enrollment: 26/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 230-320 LOW 217 Chow,Dylon
+   Total meetings created for this section: 2
+
+--- Meeting 49 ---
+📋 Meeting HTML length: 588 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18188>18188</A> FB  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18188>18188</A> FB  QZ     T      400-520    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Chow,Dylon                 Open     26/  30                      
+                        Th     330-420    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Chow,Dylon
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18188>18188</A> FB  QZ     T      400-520    <A HREF=/students/maps/map.cgi?CDH>CDH</A>  128      Chow,Dylon                 Open     26/  30'
+🔍 Additional lines: ['Th     330-420    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  217      Chow,Dylon', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18188, ID: FB, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: CDH, Room: 128
+   Instructor: Chow,Dylon, Status: Open
+   Enrollment: 26/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 330-420 LOW 217 Chow,Dylon
+   Total meetings created for this section: 2
+
+--- Meeting 50 ---
+📋 Meeting HTML length: 588 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18189>18189</A> FC  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18189>18189</A> FC  QZ     T      230-350    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Reiter,Jay                 Open     27/  30                      
+                        Th     230-320    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Reiter,Jay
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18189>18189</A> FC  QZ     T      230-350    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Reiter,Jay                 Open     27/  30'
+🔍 Additional lines: ['Th     230-320    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Reiter,Jay', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18189, ID: FC, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: GLD, Room: 436
+   Instructor: Reiter,Jay, Status: Open
+   Enrollment: 27/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 230-320 LOW 219 Reiter,Jay
+   Total meetings created for this section: 2
+
+--- Meeting 51 ---
+📋 Meeting HTML length: 588 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18190>18190</A> FD  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18190>18190</A> FD  QZ     T      400-520    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Reiter,Jay                 Open     25/  30                      
+                        Th     330-420    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Reiter,Jay
+                        MATH 124 CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18190>18190</A> FD  QZ     T      400-520    <A HREF=/students/maps/map.cgi?GLD>GLD</A>  436      Reiter,Jay                 Open     25/  30'
+🔍 Additional lines: ['Th     330-420    <A HREF=/students/maps/map.cgi?LOW>LOW</A>  219      Reiter,Jay', 'MATH 124 CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18190, ID: FD, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: GLD, Room: 436
+   Instructor: Reiter,Jay, Status: Open
+   Enrollment: 25/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: MATH 124 CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 330-420 LOW 219 Reiter,Jay
+   Total meetings created for this section: 2
+
+--- Meeting 52 ---
+📋 Meeting HTML length: 589 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18191>18191</A> FE  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18191>18191</A> FE  QZ     T      230-350    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Zhang,Zihan                Open     23/  30                      
+                        Th     230-320    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Zhang,Zihan
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18191>18191</A> FE  QZ     T      230-350    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Zhang,Zihan                Open     23/  30'
+🔍 Additional lines: ['Th     230-320    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Zhang,Zihan', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18191, ID: FE, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: BNS, Room: 115
+   Instructor: Zhang,Zihan, Status: Open
+   Enrollment: 23/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 230-320 BLD 392 Zhang,Zihan
+   Total meetings created for this section: 2
+
+--- Meeting 53 ---
+📋 Meeting HTML length: 589 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18192>18192</A> FF  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18192>18192</A> FF  QZ     T      400-520    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Zhang,Zihan                Open     23/  30                      
+                        Th     330-420    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Zhang,Zihan
+                        CANNOT BE OVERLOADED'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18192>18192</A> FF  QZ     T      400-520    <A HREF=/students/maps/map.cgi?BNS>BNS</A>  115      Zhang,Zihan                Open     23/  30'
+🔍 Additional lines: ['Th     330-420    <A HREF=/students/maps/map.cgi?BLD>BLD</A>  392      Zhang,Zihan', 'CANNOT BE OVERLOADED']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18192, ID: FF, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: BNS, Room: 115
+   Instructor: Zhang,Zihan, Status: Open
+   Enrollment: 23/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: CANNOT BE OVERLOADED
+   Created 1 additional meeting objects:
+     1. Th 330-420 BLD 392 Zhang,Zihan
+   Total meetings created for this section: 2
+
+--- Meeting 54 ---
+📋 Meeting HTML length: 593 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18193>18193</A> FG  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18193>18193</A> FG  QZ     T      230-350    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  168      Chowdhury,Zawad            Open     21/  30                      
+                        Th     230-320    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  124      Chowdhury,Zawad
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18193>18193</A> FG  QZ     T      230-350    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  168      Chowdhury,Zawad            Open     21/  30'
+🔍 Additional lines: ['Th     230-320    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  124      Chowdhury,Zawad', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18193, ID: FG, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 230-350, Building: SAV, Room: 168
+   Instructor: Chowdhury,Zawad, Status: Open
+   Enrollment: 21/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 230-320 DEM 124 Chowdhury,Zawad
+   Total meetings created for this section: 2
+
+--- Meeting 55 ---
+📋 Meeting HTML length: 593 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18194>18194</A> FH  QZ ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18194>18194</A> FH  QZ     T      400-520    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  168      Chowdhury,Zawad            Open     23/  30                      
+                        Th     330-420    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  102      Chowdhury,Zawad
+                        NO OVERLOADS'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18194>18194</A> FH  QZ     T      400-520    <A HREF=/students/maps/map.cgi?SAV>SAV</A>  168      Chowdhury,Zawad            Open     23/  30'
+🔍 Additional lines: ['Th     330-420    <A HREF=/students/maps/map.cgi?DEM>DEM</A>  102      Chowdhury,Zawad', 'NO OVERLOADS']
+✅ Parsed meeting data:
+   Main Meeting - SLN: 18194, ID: FH, Credits: 
+   Meeting Type Code: QZ, Date: T
+   Time: 400-520, Building: SAV, Room: 168
+   Instructor: Chowdhury,Zawad, Status: Open
+   Enrollment: 23/30, Additional Code: 
+   Enrollment Restriction: Restr
+   Estimated Enrollment: False
+   Description: NO OVERLOADS
+   Created 1 additional meeting objects:
+     1. Th 330-420 DEM 102 Chowdhury,Zawad
+   Total meetings created for this section: 2
+
+--- Meeting 56 ---
+📋 Meeting HTML length: 1308 characters
+📋 Meeting preview: <table width="100%" ><tr><td><pre>
+Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18195>18195</A> G  5   ...
+📝 Meeting text: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18195>18195</A> G  5       to be arranged                  Bekyel,Ebru                Open     87/ 120                B     
+                        MWF ASYNCHRONOUS REMOTE LECTURES                                                                                                                    
+                        MATH 124 CANNOT BE OVERLOADED                                                                                                                       
+                        T/TH IN-PERSON SECTIONS AND EXAMS                                                                                                                   
+                        TAKE GUIDED SELF-PLACEMENT BEFORE                                                                                                                   
+                        REGISTERING FOR COURSE                                                                                                                              
+                        HTTPS://TINYURL.COM/UWMATHGSP'
+Traceback (most recent call last):
+  File "/Users/hughgramelspacher/repos/swecc-course-scraper-hugh/run_parser_full.py", line 37, in run_parser_full
+    courses = parse_schedule_html(html, quarter, year)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hughgramelspacher/repos/swecc-course-scraper-hugh/swecc_course_scraper/commands/parser.py", line 148, in parse_schedule_html
+    meetings = _parse_course_meetings(course_block, course_code, quarter, year)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hughgramelspacher/repos/swecc-course-scraper-hugh/swecc_course_scraper/commands/parser.py", line 531, in _parse_course_meetings
+    capacity = int(capacity_str)
+               ^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'B'
+🔍 Main line: 'Restr  <A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=18195>18195</A> G  5       to be arranged                  Bekyel,Ebru                Open     87/ 120                B'
+🔍 Additional lines: ['MWF ASYNCHRONOUS REMOTE LECTURES', 'MATH 124 CANNOT BE OVERLOADED', 'T/TH IN-PERSON SECTIONS AND EXAMS', 'TAKE GUIDED SELF-PLACEMENT BEFORE', 'REGISTERING FOR COURSE', 'HTTPS://TINYURL.COM/UWMATHGSP']
+❌ Error: invalid literal for int() with base 10: 'B'
+
+❌ Failed to generate CSV files.

@@ -1,0 +1,9 @@
+Testing MATH 116 regex pattern:
+Text: ><A HREF=https://sdb.admin.washington.edu/timeschd/uwnetid/sln.asp?QTRYR=AUT+2023&SLN=23241>23241</A> A  1       to be arranged    *    *        Su,Zhixu                             8/  15E CR/NC         %A
+
+Pattern: [>\s]*<A HREF=[^>]*>(\d+)</A>\s+(\w+)\s+(\w+)\s+(\w+)\s+(to be arranged)\s+(.+?)\s+(\d+)/\s*(\d+E?)(?:\s+([^<]+?))?
+
+❌ No match found
+
+Trying simpler pattern...
+❌ Simple pattern also failed
